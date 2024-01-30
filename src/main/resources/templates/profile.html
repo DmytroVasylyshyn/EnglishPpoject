@@ -1,0 +1,291 @@
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thmeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/0ade3ab419.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="base.css">
+    <title>Profile</title>
+</head>
+
+<body>
+<!-- Nav Bar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+        <!-- Offcanvas triger -->
+        <button class="navbar-toggler me-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- Offcanvas triger -->
+        <a class="navbar-brand fw-bold me-auto" href="#">Test Logo</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <form class="d-flex ms-auto">
+                <div class="input-group my-3 my-lg-0">
+                    <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="button-addon2">
+                    <button class="btn btn-outline-secondary" type="button" id="button-addon2"><i class="fa-solid fa-magnifying-glass"></i></button>
+                </div>
+            </form>
+            <ul class="navbar-nav mb-2 mb-lg-0">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="fa-solid fa-user"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="#">Action</a></li>
+                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<!-- Nav Bar -->
+<!-- Offcanvas -->
+<div class="offcanvas offcanvas-start bg-dark text-white sidebar-nav" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel" data-bs-backdrop="true">
+    <div class="offcanvas-body p-0">
+        <nav class="navbar-dark">
+            <ul class="navbar-nav">
+                <li>
+                    <div class="text-muted small fw-bold text-uppercase px-3">Test</div>
+                </li>
+                <li>
+                    <a href="/posts" class="nav-link px-3 active">
+                            <span class="me-2">
+                                <i class="fa-solid fa-house"></i>
+                            </span>
+                        <span>Home</span>
+                    </a>
+                    <a href="#" class="nav-link px-3 active">
+                            <span class="me-2">
+                                <i class="fa-regular fa-address-card"></i>
+                            </span>
+                        <span>Profile</span>
+                    </a>
+                    <a href="#" class="nav-link px-3 active">
+                            <span class="me-2">
+                                <i class="fa-solid fa-message"></i>
+                            </span>
+                        <span>Messages</span>
+                    </a>
+                    <a href="#" class="nav-link px-3 active">
+                            <span class="me-2">
+                                <i class="fa-solid fa-people-group"></i>
+                            </span>
+                        <span>Communiti</span>
+                    </a>
+                </li>
+                <li class="my-4">
+                    <hr class="dropdown-driver">
+                </li>
+                <li>
+                    <div class="text-muted small fw-bold text-uppercase px-3">Test</div>
+                </li>
+                <li>
+                    <a href="#" class="nav-link px-3 active">
+                            <span class="me-2">
+                                <i class="fa-solid fa-question"></i>
+                            </span>
+                        <span>Support</span>
+                    </a>
+                    <a href="#" class="nav-link px-3 active">
+                            <span class="me-2">
+                                <i class="fa-regular fa-envelope"></i>
+                            </span>
+                        <span>Contacts</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</div>
+<!-- Offcanvas -->
+<!-- Main -->
+<div class="main" style="background-color: #eee;">
+    <section class="" >
+        <div class="container py-5">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="card mb-4">
+                        <div class="card-body text-center">
+                            <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava3.webp" alt="avatar" class="rounded-circle img-fluid" style="width: 150px;">
+                            <h5 class="my-3">John Smith</h5>
+                            <p class="text-muted mb-1">German B2, English A2</p>
+                            <div class="d-flex justify-content-center mb-2">
+                                <button type="button" class="btn btn-dark">Follow</button>
+                                <button type="button" class="btn btn-outline-dark ms-1">Message</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card mb-4 mb-lg-0">
+                        <div class="card-body p-0">
+                            <ul class="list-group list-group-flush rounded-3">
+                                <li class="list-group-item d-flex justify-content-between align-items-center p-3">
+                                    <i class="fa-solid fa-people-group"></i>
+                                    <p class="mb-0">Test Groups</p>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center p-3">
+                                    <i class="fa-solid fa-people-group"></i>
+                                    <p class="mb-0">Test Groups</p>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center p-3">
+                                    <i class="fa-solid fa-people-group"></i>
+                                    <p class="mb-0">Test Groups</p>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center p-3">
+                                    <i class="fa-solid fa-people-group"></i>
+                                    <p class="mb-0">Test Groups</p>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center p-3">
+                                    <i class="fa-solid fa-people-group"></i>
+                                    <p class="mb-0">Test Groups</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-8" th:each="user : ${users}">
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <p class="mb-0">Full Name</p>
+                                </div>
+                                <div class="col-sm-9">
+                                    <p class="text-muted mb-0" th:text="${user.username + ' ' + user.usersurname}">
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <p class="mb-0">Email</p>
+                                </div>
+                                <div class="col-sm-9">
+                                    <p class="text-muted mb-0" th:text="${user.email}">
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <p class="mb-0">Phone</p>
+                                </div>
+                                <div class="col-sm-9">
+                                    <p class="text-muted mb-0" th:text="${user.phonenumber}">
+                                </div>
+                            </div>
+<!--                            <hr>-->
+<!--                            <div class="row">-->
+<!--                                <div class="col-sm-3">-->
+<!--                                    <p class="mb-0">Language</p>-->
+<!--                                </div>-->
+<!--                                <div class="col-sm-9">-->
+<!--                                    <p class="text-muted mb-0" th:text="${user.language}">-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                            <hr>-->
+<!--                            <div class="row">-->
+<!--                                <div class="col-sm-3">-->
+<!--                                    <p class="mb-0">Qualification</p>-->
+<!--                                </div>-->
+<!--                                <div class="col-sm-9">-->
+<!--                                    <p class="text-muted mb-0" th:text="${user.qualification}">-->
+<!--                                </div>-->
+<!--                            </div>-->
+
+                            <hr>
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <p class="mb-0">Mobile</p>
+                                </div>
+                                <div class="col-sm-9">
+                                    <p class="text-muted mb-0" th:text="${user.phonenumber}">
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <p class="mb-0">Address</p>
+                                </div>
+                                <div class="col-sm-9">
+                                    <p class="text-muted mb-0" th:text="${user.address}">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="card mb-4 mb-md-0">
+                                <div class="card-body">
+                                    <p class="mb-4"><span class="text-primary font-italic me-1">assigment</span> Project Status
+                                    </p>
+                                    <p class="mb-1" style="font-size: .77rem;">Web Design</p>
+                                    <div class="progress rounded" style="height: 5px;">
+                                        <div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                    <p class="mt-4 mb-1" style="font-size: .77rem;">Website Markup</p>
+                                    <div class="progress rounded" style="height: 5px;">
+                                        <div class="progress-bar" role="progressbar" style="width: 72%" aria-valuenow="72" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                    <p class="mt-4 mb-1" style="font-size: .77rem;">One Page</p>
+                                    <div class="progress rounded" style="height: 5px;">
+                                        <div class="progress-bar" role="progressbar" style="width: 89%" aria-valuenow="89" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                    <p class="mt-4 mb-1" style="font-size: .77rem;">Mobile Template</p>
+                                    <div class="progress rounded" style="height: 5px;">
+                                        <div class="progress-bar" role="progressbar" style="width: 55%" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                    <p class="mt-4 mb-1" style="font-size: .77rem;">Backend API</p>
+                                    <div class="progress rounded mb-2" style="height: 5px;">
+                                        <div class="progress-bar" role="progressbar" style="width: 66%" aria-valuenow="66" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card mb-4 mb-md-0">
+                                <div class="card-body">
+                                    <p class="mb-4"><span class="text-primary font-italic me-1">assigment</span> Project Status
+                                    </p>
+                                    <p class="mb-1" style="font-size: .77rem;">Web Design</p>
+                                    <div class="progress rounded" style="height: 5px;">
+                                        <div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                    <p class="mt-4 mb-1" style="font-size: .77rem;">Website Markup</p>
+                                    <div class="progress rounded" style="height: 5px;">
+                                        <div class="progress-bar" role="progressbar" style="width: 72%" aria-valuenow="72" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                    <p class="mt-4 mb-1" style="font-size: .77rem;">One Page</p>
+                                    <div class="progress rounded" style="height: 5px;">
+                                        <div class="progress-bar" role="progressbar" style="width: 89%" aria-valuenow="89" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                    <p class="mt-4 mb-1" style="font-size: .77rem;">Mobile Template</p>
+                                    <div class="progress rounded" style="height: 5px;">
+                                        <div class="progress-bar" role="progressbar" style="width: 55%" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                    <p class="mt-4 mb-1" style="font-size: .77rem;">Backend API</p>
+                                    <div class="progress rounded mb-2" style="height: 5px;">
+                                        <div class="progress-bar" role="progressbar" style="width: 66%" aria-valuenow="66" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+<!-- Main -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+
+</html>

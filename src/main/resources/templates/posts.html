@@ -1,0 +1,304 @@
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thmeleaf.org">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/0ade3ab419.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="base.css">
+    <title>Feed</title>
+</head>
+
+<body>
+<!-- Nav Bar -->
+<nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+        <!-- Offcanvas triger -->
+        <button class="navbar-toggler me-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- Offcanvas triger -->
+        <a class="navbar-brand fw-bold me-auto" href="#">Test Logo</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <form class="d-flex ms-auto">
+                <div class="input-group my-3 my-lg-0">
+                    <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="button-addon2">
+                    <button class="btn btn-outline-secondary" type="button" id="button-addon2"><i class="fa-solid fa-magnifying-glass"></i></button>
+                </div>
+            </form>
+            <ul class="navbar-nav mb-2 mb-lg-0">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="fa-solid fa-user"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="#">Action</a></li>
+                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<!-- Nav Bar -->
+<!-- Offcanvas -->
+<div class="offcanvas offcanvas-start bg-dark text-white sidebar-nav" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel" data-bs-backdrop="true">
+    <div class="offcanvas-body p-0">
+        <nav class="navbar-dark">
+            <ul class="navbar-nav">
+                <li>
+                    <div class="text-muted small fw-bold text-uppercase px-3">Test</div>
+                </li>
+                <li>
+                    <a href="#" class="nav-link px-3 active">
+                            <span class="me-2">
+                                <i class="fa-solid fa-house"></i>
+                            </span>
+                        <span>Home</span>
+                    </a>
+                    <a href="/profile" class="nav-link px-3 active">
+                            <span class="me-2">
+                                <i class="fa-regular fa-address-card"></i>
+                            </span>
+                        <span>Profile</span>
+                    </a>
+                    <a href="#" class="nav-link px-3 active">
+                            <span class="me-2">
+                                <i class="fa-solid fa-message"></i>
+                            </span>
+                        <span>Messages</span>
+                    </a>
+                    <a href="#" class="nav-link px-3 active">
+                            <span class="me-2">
+                                <i class="fa-solid fa-people-group"></i>
+                            </span>
+                        <span>Communiti</span>
+                    </a>
+                </li>
+                <li class="my-4">
+                    <hr class="dropdown-driver">
+                </li>
+                <li>
+                    <div class="text-muted small fw-bold text-uppercase px-3">Test</div>
+                </li>
+                <li>
+                    <a href="#" class="nav-link px-3 active">
+                            <span class="me-2">
+                                <i class="fa-solid fa-question"></i>
+                            </span>
+                        <span>Support</span>
+                    </a>
+                    <a href="#" class="nav-link px-3 active">
+                            <span class="me-2">
+                                <i class="fa-regular fa-envelope"></i>
+                            </span>
+                        <span>Contacts</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</div>
+<!-- Offcanvas -->
+<!-- Main -->
+<div class="main">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-2 order-xl-0">
+                <div class="card my-3">
+                    <div class="card-header d-flex justify-content-between align-items-center" data-bs-toggle="collapse" href="#collapseFilter" role="button" aria-expanded="false" aria-controls="collapseFilter">
+                        <span class="my-2 h5">Filter</span>
+                        <!-- <span><i class="fa-solid fa-chevron-up"></i></span> -->
+                    </div>
+                    <div class="card-body text-left collapse show" id="collapseFilter">
+                        <h6>Refine by</h4>
+                            <p class="text-muted mb-1">Categoris</p>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="" />
+                                <label class="form-check-label" for="">Test</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="" />
+                                <label class="form-check-label" for="">Test</label>
+                            </div>
+                            <hr class="dropdown-divider">
+                            <p class="text-muted mb-1">Categoris</p>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="" />
+                                <label class="form-check-label" for="">Test</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="" />
+                                <label class="form-check-label" for="">Test</label>
+                            </div>
+                            <hr class="dropdown-divider">
+                            <p class="text-muted mb-1">Categoris</p>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="" />
+                                <label class="form-check-label" for="">Test</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="" />
+                                <label class="form-check-label" for="">Test</label>
+                            </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 order-xl-2">
+                <div class="card my-3">
+                    <div class="card-header" data-bs-toggle="collapse" href="#collapseFirstTop" role="button" aria-expanded="false" aria-controls="collapseFirstTop">
+                        <h5 class="my-3 fw-bold" >Test</h5>
+                    </div>
+                    <div class="card-body text-left collapse show" id="collapseFirstTop">
+
+                        <div class="mt-3">
+                            <h5 class="font-weight-bold mb-2">Lorem, ipsum, dolor.</h5>
+                            <p class="text-muted mb-1">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius</p>
+                        </div>
+                        <div class="mt-3">
+                            <h5 class="font-weight-bold mb-2">Lorem, ipsum, dolor.</h5>
+                            <p class="text-muted mb-1">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius</p>
+                        </div>
+                        <div class="mt-3">
+                            <h5 class="font-weight-bold mb-2">Lorem, ipsum, dolor.</h5>
+                            <p class="text-muted mb-1">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header" data-bs-toggle="collapse" href="#collapseSecondTop" role="button" aria-expanded="false" aria-controls="collapseSecondTop">
+                        <h5 class="my-3 fw-bold" >Test</h5>
+                    </div>
+                    <div class="card-body text-left collapse show" id="collapseSecondTop">
+                        <div class="mt-3">
+                            <h5 class="font-weight-bold mb-2">Lorem, ipsum, dolor.</h5>
+                            <p class="text-muted mb-1">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius</p>
+                        </div>
+                        <div class="mt-3">
+                            <h5 class="font-weight-bold mb-2">Lorem, ipsum, dolor.</h5>
+                            <p class="text-muted mb-1">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius</p>
+                        </div>
+                        <div class="mt-3">
+                            <h5 class="font-weight-bold mb-2">Lorem, ipsum, dolor.</h5>
+                            <p class="text-muted mb-1">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius</p>
+                        </div>
+                        <div class="mt-3">
+                            <h5 class="font-weight-bold mb-2">Lorem, ipsum, dolor.</h5>
+                            <p class="text-muted mb-1">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius</p>
+                        </div>
+                        <div class="mt-3">
+                            <h5 class="font-weight-bold mb-2">Lorem, ipsum, dolor.</h5>
+                            <p class="text-muted mb-1">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius</p>
+                        </div>
+                        <div class="mt-3">
+                            <h5 class="font-weight-bold mb-2">Lorem, ipsum, dolor.</h5>
+                            <p class="text-muted mb-1">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-7 order-xl-1" th:each="el: ${posts}">
+                <section class="mx-auto my-0">
+                    <div class="card mt-3">
+                        <div class="card-body d-flex flex-row">
+                            <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-8.jpg" class="rounded-circle me-3" height="50px" width="50px" alt="avatar" />
+                            <div>
+                                <p th:text="${el.user.usersurname + ' ' + el.user.username}"/>
+                                <h5 class="card-title font-weight-bold mb-2" th:text="${el.title}"/>
+                            </div>
+
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text" id="collapseContent" th:text="${el.anons}"/>
+                            <div class="d-flex justify-content-between">
+                                <a class="btn btn-link link-dark p-md-1 my-1" th:href="'/blog/' + ${el.postid}">Read more</a>
+                                <div>
+                                    <a href="#"><i class="fas fa-share-alt text-muted p-md-1 my-1 me-2" data-mdb-toggle="tooltip" data-mdb-placement="top" title="Share this post"></i></a>
+                                    <a href="#"><i class="fas fa-heart text-muted p-md-1 my-1 me-0" data-mdb-toggle="tooltip" data-mdb-placement="top" title="I like it"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                     </div>
+<!--                    <div class="card mt-3">-->
+<!--                        <div class="card-body d-flex flex-row">-->
+<!--                            <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-8.jpg" class="rounded-circle me-3" height="50px" width="50px" alt="avatar" />-->
+<!--                            <div>-->
+<!--                                <h5 class="card-title font-weight-bold mb-2">Test title</h5>-->
+<!--                                <p class="card-text"><i class="far fa-clock pe-2"></i>07/24/2018</p>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                        <div class="card-body">-->
+<!--                            <p class="card-text" id="collapseContent">-->
+<!--                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla, harum quibusdam quos corporis, a aliquid tempora repudiandae atque laudantium saepe maiores consequuntur dolorem corrupti optio quia culpa, sunt mollitia recusandae quidem delectus eum nesciunt sapiente voluptas. Veniam autem, minus asperiores quasi magni, earum cum sed voluptas corrupti fugit iusto quidem nesciunt itaque suscipit neque ad obcaecati, eum illum? Deleniti quos, omnis. Amet placeat sunt, illo nemo repellendus rem assumenda atque saepe a quod eveniet voluptate molestiae nesciunt ipsum quo natus consequuntur quae earum ullam provident blanditiis, esse at illum. Quasi cupiditate modi praesentium quia tempora neque recusandae accusamus commodi cumque.-->
+<!--                            </p>-->
+<!--                            <div class="d-flex justify-content-between">-->
+<!--                                <a class="btn btn-link link-dark p-md-1 my-1">Read more</a>-->
+<!--                                <div>-->
+<!--                                    <a href="#"><i class="fas fa-share-alt text-muted p-md-1 my-1 me-2" data-mdb-toggle="tooltip" data-mdb-placement="top" title="Share this post"></i></a>-->
+<!--                                    <a href="#"><i class="fas fa-heart text-muted p-md-1 my-1 me-0" data-mdb-toggle="tooltip" data-mdb-placement="top" title="I like it"></i></a>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <div class="card mt-3">-->
+<!--                        <div class="card-body d-flex flex-row">-->
+<!--                            <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-8.jpg" class="rounded-circle me-3" height="50px" width="50px" alt="avatar" />-->
+<!--                            <div>-->
+<!--                                <h5 class="card-title font-weight-bold mb-2">Test title</h5>-->
+<!--                                <p class="card-text"><i class="far fa-clock pe-2"></i>07/24/2018</p>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                        <div class="card-body">-->
+<!--                            <p class="card-text" id="collapseContent">-->
+<!--                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla, harum quibusdam quos corporis, a aliquid tempora repudiandae atque laudantium saepe maiores consequuntur dolorem corrupti optio quia culpa, sunt mollitia recusandae quidem delectus eum nesciunt sapiente voluptas. Veniam autem, minus asperiores quasi magni, earum cum sed voluptas corrupti fugit iusto quidem nesciunt itaque suscipit neque ad obcaecati, eum illum? Deleniti quos, omnis. Amet placeat sunt, illo nemo repellendus rem assumenda atque saepe a quod eveniet voluptate molestiae nesciunt ipsum quo natus consequuntur quae earum ullam provident blanditiis, esse at illum. Quasi cupiditate modi praesentium quia tempora neque recusandae accusamus commodi cumque.-->
+<!--                            </p>-->
+<!--                            <div class="d-flex justify-content-between">-->
+<!--                                <a class="btn btn-link link-dark p-md-1 my-1">Read more</a>-->
+<!--                                <div>-->
+<!--                                    <a href="#"><i class="fas fa-share-alt text-muted p-md-1 my-1 me-2" data-mdb-toggle="tooltip" data-mdb-placement="top" title="Share this post"></i></a>-->
+<!--                                    <a href="#"><i class="fas fa-heart text-muted p-md-1 my-1 me-0" data-mdb-toggle="tooltip" data-mdb-placement="top" title="I like it"></i></a>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <div class="card mt-3">-->
+<!--                        <div class="card-body d-flex flex-row">-->
+<!--                            <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-8.jpg" class="rounded-circle me-3" height="50px" width="50px" alt="avatar" />-->
+<!--                            <div>-->
+<!--                                <h5 class="card-title font-weight-bold mb-2">Test title</h5>-->
+<!--                                <p class="card-text"><i class="far fa-clock pe-2"></i>07/24/2018</p>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                        <div class="card-body">-->
+<!--                            <p class="card-text" id="collapseContent">-->
+<!--                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla, harum quibusdam quos corporis, a aliquid tempora repudiandae atque laudantium saepe maiores consequuntur dolorem corrupti optio quia culpa, sunt mollitia recusandae quidem delectus eum nesciunt sapiente voluptas. Veniam autem, minus asperiores quasi magni, earum cum sed voluptas corrupti fugit iusto quidem nesciunt itaque suscipit neque ad obcaecati, eum illum? Deleniti quos, omnis. Amet placeat sunt, illo nemo repellendus rem assumenda atque saepe a quod eveniet voluptate molestiae nesciunt ipsum quo natus consequuntur quae earum ullam provident blanditiis, esse at illum. Quasi cupiditate modi praesentium quia tempora neque recusandae accusamus commodi cumque.-->
+<!--                            </p>-->
+<!--                            <div class="d-flex justify-content-between">-->
+<!--                                <a class="btn btn-link link-dark p-md-1 my-1">Read more</a>-->
+<!--                                <div>-->
+<!--                                    <a href="#"><i class="fas fa-share-alt text-muted p-md-1 my-1 me-2" data-mdb-toggle="tooltip" data-mdb-placement="top" title="Share this post"></i></a>-->
+<!--                                    <a href="#"><i class="fas fa-heart text-muted p-md-1 my-1 me-0" data-mdb-toggle="tooltip" data-mdb-placement="top" title="I like it"></i></a>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+                </section>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<!-- Main -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+
+</html>
