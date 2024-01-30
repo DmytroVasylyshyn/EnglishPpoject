@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/0ade3ab419.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/base.css">
+    <title>Teacher profile</title>
+</head>
+
+<body>
+    <!-- Nav Bar -->
+    <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <!-- Offcanvas triger -->
+            <button class="navbar-toggler me-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- Offcanvas triger -->
+            <a class="navbar-brand fw-bold me-auto" href="#">Test Logo</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <form class="d-flex ms-auto">
+                    <div class="input-group my-3 my-lg-0">
+                        <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="button-addon2">
+                        <button class="btn btn-outline-secondary" type="button" id="button-addon2"><i class="fa-solid fa-magnifying-glass"></i></button>
+                    </div>
+                </form>
+                <ul class="navbar-nav mb-2 mb-lg-0">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fa-solid fa-user"></i>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Nav Bar -->
+    <!-- Offcanvas -->
+    <div class="offcanvas offcanvas-start bg-dark text-white sidebar-nav" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel" data-bs-backdrop="true">
+        <div class="offcanvas-body p-0">
+            <nav class="navbar-dark">
+                <ul class="navbar-nav">
+                    <li>
+                        <div class="text-muted small fw-bold text-uppercase px-3">Test</div>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-link px-3 active">
+                            <span class="me-2">
+                                <i class="fa-solid fa-house"></i>
+                            </span>
+                            <span>Home</span>
+                        </a>
+                        <a href="#" class="nav-link px-3 active">
+                            <span class="me-2">
+                                <i class="fa-regular fa-address-card"></i>
+                            </span>
+                            <span>Profile</span>
+                        </a>
+                        <a href="#" class="nav-link px-3 active">
+                            <span class="me-2">
+                                <i class="fa-solid fa-message"></i>
+                            </span>
+                            <span>Messages</span>
+                        </a>
+                        <a href="#" class="nav-link px-3 active">
+                            <span class="me-2">
+                                <i class="fa-solid fa-people-group"></i>
+                            </span>
+                            <span>Communiti</span>
+                        </a>
+                    </li>
+                    <li class="my-4">
+                        <hr class="dropdown-driver">
+                    </li>
+                    <li>
+                        <div class="text-muted small fw-bold text-uppercase px-3">Test</div>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-link px-3 active">
+                            <span class="me-2">
+                                <i class="fa-solid fa-question"></i>
+                            </span>
+                            <span>Support</span>
+                        </a>
+                        <a href="#" class="nav-link px-3 active">
+                            <span class="me-2">
+                                <i class="fa-regular fa-envelope"></i>
+                            </span>
+                            <span>Contacts</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <!-- Offcanvas -->
+    <!-- Modal Edit User Profile -->
+    <div class="modal fade" id="editUserProfile" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content" style="border-radius: 1rem;">
+                <div class="card modal-body bg-dark text-white" style="border-radius: 1rem;">
+                    <div class="card-body px-5">
+                        <div class="mb-md-5 mt-md-4 pb-2">
+                            <div class="d-flex justify-content-end">
+                                <button type="button" class="btn text-white" data-bs-dismiss="modal" aria-label="Close"><i class="fa-solid fa-xmark fa-2x"></i></button>
+                            </div>
+                            <h2 class="text-uppercase fw-bold text-center mb-5">Edit User Profile</h2>
+                            <form action="">
+                                <!-- Change avatar -->
+                                <div class="mb-3">
+                                    <label for="formFile" class="form-label">Select img</label>
+                                    <input class="form-control" type="file" id="formFile">
+                                </div>
+                                <!-- Change avatar -->
+                                <!-- Change username -->
+                                <div class="form-outline mb-4">
+                                    <label class="form-label" for="form3Example1cg">User Name</label>
+                                    <input type="text" id="form3Example1cg" class="form-control form-control-lg" value="Test User" />
+                                </div>
+                                <!-- Change username -->
+                                <!-- Change user email -->
+                                <div class="form-outline mb-4">
+                                    <label class="form-label" for="form3Example3cg">User Email</label>
+                                    <input type="email" id="form3Example3cg" class="form-control form-control-lg" value="test_email@test.com" />
+                                </div>
+                                <!-- Change user email -->
+                                <!-- Change Title -->
+                                <div class="form-outline mb-4">
+                                    <label class="form-label" for="form3Example3cg">About</label>
+                                    <input type="email" id="form3Example3cg" class="form-control form-control-lg" placeholder="Title" />
+                                </div>
+                                <div class="form-outline mb-4">
+                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="My bio"></textarea>
+                                </div>
+                                <!-- Change Title -->
+                                <div class="d-flex justify-content-center mt-4">
+                                    <button type="button" class="btn btn-outline-light btn-lg px-5">Save</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal Edit User Profile -->
+    <!-- Modal Add User Post -->
+    <div class="modal fade" id="addNewPost" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content" style="border-radius: 1rem;">
+                <div class="card modal-body bg-dark text-white" style="border-radius: 1rem;">
+                    <div class="card-body px-5">
+                        <div class="mb-md-5 mt-md-4 pb-2">
+                            <div class="d-flex justify-content-end">
+                                <button type="button" class="btn text-white" data-bs-dismiss="modal" aria-label="Close"><i class="fa-solid fa-xmark fa-2x"></i></button>
+                            </div>
+                            <h2 class="text-uppercase fw-bold text-center mb-5">Add new post</h2>
+                            <form action="">
+                                <!-- Title -->
+                                <div class="form-outline mb-4">
+                                    <input type="text" id="form3Example1cg" class="form-control form-control-lg" placeholder="Title" />
+                                </div>
+                                <!-- Title -->
+                                <!-- Text -->
+                                <div class="form-outline mb-4">
+                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Text"></textarea>
+                                </div>
+                                <!-- Text -->
+                                <!-- Collapse -->
+                                <div class="row">
+                                    <!-- Clobal Taggs -->
+                                    <div class="col text-center">
+                                        <button class="btn btn-outline-light" type="button" data-bs-toggle="collapse" data-bs-target="#globalTaggs" aria-expanded="false" aria-controls="globalTaggs">
+                                            Global Taggs
+                                        </button>
+                                        <div class="collapse mt-3" id="globalTaggs">
+                                            <div class="card card-body text-dark">
+                                                <div class="row">
+                                                    <div class="col-lg-4">
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="checkbox" value="" id="English">
+                                                            <label class="form-check-label" for="English">
+                                                                English
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-4">
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="checkbox" value="" id="German">
+                                                            <label class="form-check-label" for="German">
+                                                                German
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-4">
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="checkbox" value="" id="French">
+                                                            <label class="form-check-label" for="French">
+                                                                French
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-4">
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="checkbox" value="" id="Italy">
+                                                            <label class="form-check-label" for="Italy">
+                                                                Italy
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Clobal Taggs -->
+                                    <!-- Secondary Taggs -->
+                                    <div class="col text-center">
+                                        <button class="btn btn-outline-light" type="button" data-bs-toggle="collapse" data-bs-target="#secondaryTaggs" aria-expanded="false" aria-controls="secondaryTaggs">
+                                            Secondary Taggs
+                                        </button>
+                                        <div class="collapse mt-3" id="secondaryTaggs">
+                                            <div class="card card-body text-dark">
+                                                <div class="row">
+                                                    <div class="col-lg-4">
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="checkbox" value="" id="English">
+                                                            <label class="form-check-label" for="English">
+                                                                Books
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-4">
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="checkbox" value="" id="German">
+                                                            <label class="form-check-label" for="German">
+                                                                Language
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-4">
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="checkbox" value="" id="French">
+                                                            <label class="form-check-label" for="French">
+                                                                Game
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-4">
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="checkbox" value="" id="Italy">
+                                                            <label class="form-check-label" for="Italy">
+                                                                Free
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Secondary Taggs -->
+                        </div>
+                        <!-- Collapse -->
+                        <div class="d-flex justify-content-center mt-4">
+                            <button type="button" class="btn btn-outline-light btn-lg px-5">Save</button>
+                        </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <!-- Modal Add User Post -->
+    <!-- Main -->
+    <div class="main">
+        <div class="container-fluid">
+            <div class="row m-3">
+                <div class="col-lg-3 mt-4">
+                    <div class="card mb-3">
+                        <div class="card-body text-center">
+                            <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava3.webp" alt="avatar" class="rounded-circle img-fluid" style="width: 150px;">
+                            <div class="my-3">
+                                <h5 class="mb-0">John Smith</h5>
+                                <span class="small text-muted">Teacher Jan 1 1998</span>
+                            </div>
+                            <!-- Buttons for followers -->
+                            <!-- <div class="d-flex justify-content-center mb-2">
+                                <button type="button" class="btn btn-dark">Follow</button>
+                                <button type="button" class="btn btn-outline-dark ms-1">Message</button>
+                            </div>
+                            <button class="btn btn-outline-dark w-100">Add frends</button> -->
+                            <!-- Buttons for followers -->
+                            <div class="d-flex justify-content-center mb-2">
+                                <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#addNewPost">Add Post</button>
+                                <button type="button" class="btn btn-outline-dark ms-1" data-bs-toggle="modal" data-bs-target="#editUserProfile">Edit Profile</button>
+                            </div>
+                            <div class="d-flex justify-content-between px-2">
+                                <div class="">
+                                    <p class="h5">Frends</p>
+                                    <p class="small text-muted">24</p>
+                                </div>
+                                <div class="">
+                                    <p class="h5">Following</p>
+                                    <p class="small text-muted">34</p>
+                                </div>
+                                <div>
+                                    <p class="h5">Followers</p>
+                                    <p class="small text-muted">155</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-body">
+                            <p class="h4 fw-bold">Frends</p>
+                            <hr class="dropdown-divider">
+                            <div class="d-flex">
+                                <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava3.webp" alt="avatar" class="rounded-circle img-fluid" style="width: 50px; height: 50px;">
+                                <div>
+                                    <div>Test Name</div>
+                                    <p class="text-muted small">Lorem, ipsum, dolor.</p>
+                                </div>
+                            </div>
+                            <div class="d-flex">
+                                <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava3.webp" alt="avatar" class="rounded-circle img-fluid" style="width: 50px; height: 50px;">
+                                <div>
+                                    <div>Test Name</div>
+                                    <p class="text-muted small">Lorem, ipsum, dolor.</p>
+                                </div>
+                            </div>
+                            <div class="d-flex">
+                                <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava3.webp" alt="avatar" class="rounded-circle img-fluid" style="width: 50px; height: 50px;">
+                                <div>
+                                    <div>Test Name</div>
+                                    <p class="text-muted small">Lorem, ipsum, dolor.</p>
+                                </div>
+                            </div>
+                            <div class="d-flex">
+                                <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava3.webp" alt="avatar" class="rounded-circle img-fluid" style="width: 50px; height: 50px;">
+                                <div>
+                                    <div>Test Name</div>
+                                    <p class="text-muted small">Lorem, ipsum, dolor.</p>
+                                </div>
+                            </div>
+                            <div class="d-flex">
+                                <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava3.webp" alt="avatar" class="rounded-circle img-fluid" style="width: 50px; height: 50px;">
+                                <div>
+                                    <div>Test Name</div>
+                                    <p class="text-muted small">Lorem, ipsum, dolor.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 mt-4 ">
+                    <div class="card mb-5">
+                        <div class="card-body text-left">
+                            <p class="h4 fw-bold">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            <p class="h5 text-muted">Lorem, ipsum dolor sit amet.</p>
+                            <div class="">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star-half-stroke"></i>
+                            </div>
+                            <div class="">
+                                <a href="#"><i class="fa-regular fa-calendar text-dark fa-3x mt-3"></i></a>
+                                <a href="#"><i class="fa-solid fa-circle-info text-dark fa-3x m-3"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between">
+                                <div class="d-flex ">
+                                    <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava3.webp" alt="avatar" class="rounded-circle img-fluid" style="width: 50px; height: 50px;">
+                                    <div>
+                                        <span class="h5 fw-bold">John Smith</span><br>
+                                        <span class="small text-muted"><i class="fa-solid fa-clock"></i> 3 min ago</span>
+                                    </div>
+                                </div>
+                                <div>
+                                    <a href="#">
+                                        <i class="fa-solid fa-bookmark text-dark fa-2x"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <p class="h4 mt-4 fw-bold">Lorem, ipsum, dolor.</p>
+                            <p class="h5 text-muted">Lorem ipsum, dolor sit amet consectetur adipisicing, elit. Provident ipsa doloribus expedita, repellendus illo facere commodi, quisquam rem corrupti ipsum suscipit alias aut numquam cumque...</p>
+                            <a href="#" class="text-dark">View more</a>
+                            <div class="mt-3 mb-3">
+                                <span class="border border-secondary mx-2 p-2 text-white rounded-pill bg-secondary">English</span>
+                                <span class="border border-secondary mx-2 p-2 text-white rounded-pill bg-secondary">Books</span>
+                                <span class="border border-secondary mx-2 p-2 text-white rounded-pill bg-secondary">Language</span>
+                            </div>
+                            <hr class="dropdown-divider">
+                            <div class="d-flex">
+                                <div class="mx-3"><i class="fa-solid fa-heart"></i> Like <span class="">15</span></div>
+                                <div><i class="fa-solid fa-comment"></i> Comments <span>8</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card mt-3">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between">
+                                <div class="d-flex ">
+                                    <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava3.webp" alt="avatar" class="rounded-circle img-fluid" style="width: 50px; height: 50px;">
+                                    <div>
+                                        <span class="h5 fw-bold">John Smith</span><br>
+                                        <span class="small text-muted"><i class="fa-solid fa-clock"></i> 3 min ago</span>
+                                    </div>
+                                </div>
+                                <div>
+                                    <a href="#">
+                                        <i class="fa-solid fa-bookmark text-dark fa-2x"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <p class="h4 mt-4 fw-bold">Lorem, ipsum, dolor.</p>
+                            <p class="h5 text-muted">Lorem ipsum, dolor sit amet consectetur adipisicing, elit. Provident ipsa doloribus expedita, repellendus illo facere commodi, quisquam rem corrupti ipsum suscipit alias aut numquam cumque...</p>
+                            <a href="#" class="text-dark">View more</a>
+                            <div class="mt-3 mb-3">
+                                <span class="border border-secondary mx-2 p-2 text-white rounded-pill bg-secondary">English</span>
+                                <span class="border border-secondary mx-2 p-2 text-white rounded-pill bg-secondary">Books</span>
+                                <span class="border border-secondary mx-2 p-2 text-white rounded-pill bg-secondary">Language</span>
+                            </div>
+                            <hr class="dropdown-divider">
+                            <div class="d-flex">
+                                <div class="mx-3"><i class="fa-solid fa-heart"></i> Like <span class="">15</span></div>
+                                <div><i class="fa-solid fa-comment"></i> Comments <span>8</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card mt-3">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between">
+                                <div class="d-flex ">
+                                    <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava3.webp" alt="avatar" class="rounded-circle img-fluid" style="width: 50px; height: 50px;">
+                                    <div>
+                                        <span class="h5 fw-bold">John Smith</span><br>
+                                        <span class="small text-muted"><i class="fa-solid fa-clock"></i> 3 min ago</span>
+                                    </div>
+                                </div>
+                                <div>
+                                    <a href="#">
+                                        <i class="fa-solid fa-bookmark text-dark fa-2x"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <p class="h4 mt-4 fw-bold">Lorem, ipsum, dolor.</p>
+                            <p class="h5 text-muted">Lorem ipsum, dolor sit amet consectetur adipisicing, elit. Provident ipsa doloribus expedita, repellendus illo facere commodi, quisquam rem corrupti ipsum suscipit alias aut numquam cumque...</p>
+                            <a href="#" class="text-dark">View more</a>
+                            <div class="mt-3 mb-3">
+                                <span class="border border-secondary mx-2 p-2 text-white rounded-pill bg-secondary">English</span>
+                                <span class="border border-secondary mx-2 p-2 text-white rounded-pill bg-secondary">Books</span>
+                                <span class="border border-secondary mx-2 p-2 text-white rounded-pill bg-secondary">Language</span>
+                            </div>
+                            <hr class="dropdown-divider">
+                            <div class="d-flex">
+                                <div class="mx-3"><i class="fa-solid fa-heart"></i> Like <span class="">15</span></div>
+                                <div><i class="fa-solid fa-comment"></i> Comments <span>8</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="card mt-4">
+                        <div class="card-body">
+                            <p class="h4 fw-bold">Students</p>
+                            <hr class="dropdown-divider">
+                            <div class="d-flex">
+                                <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava3.webp" alt="avatar" class="rounded-circle img-fluid" style="width: 50px; height: 50px;">
+                                <div>
+                                    <div>Test Name</div>
+                                    <p class="text-muted small">Lorem, ipsum, dolor.</p>
+                                </div>
+                            </div>
+                            <div class="d-flex">
+                                <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava3.webp" alt="avatar" class="rounded-circle img-fluid" style="width: 50px; height: 50px;">
+                                <div>
+                                    <div>Test Name</div>
+                                    <p class="text-muted small">Lorem, ipsum, dolor.</p>
+                                </div>
+                            </div>
+                            <div class="d-flex">
+                                <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava3.webp" alt="avatar" class="rounded-circle img-fluid" style="width: 50px; height: 50px;">
+                                <div>
+                                    <div>Test Name</div>
+                                    <p class="text-muted small">Lorem, ipsum, dolor.</p>
+                                </div>
+                            </div>
+                            <div class="d-flex">
+                                <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava3.webp" alt="avatar" class="rounded-circle img-fluid" style="width: 50px; height: 50px;">
+                                <div>
+                                    <div>Test Name</div>
+                                    <p class="text-muted small">Lorem, ipsum, dolor.</p>
+                                </div>
+                            </div>
+                            <div class="d-flex">
+                                <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava3.webp" alt="avatar" class="rounded-circle img-fluid" style="width: 50px; height: 50px;">
+                                <div>
+                                    <div>Test Name</div>
+                                    <p class="text-muted small">Lorem, ipsum, dolor.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card mt-4">
+                        <div class="card-body">
+                            <p class="h4 fw-bold">Teacher</p>
+                            <hr class="dropdown-divider">
+                            <div class="d-flex">
+                                <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava3.webp" alt="avatar" class="rounded-circle img-fluid" style="width: 50px; height: 50px;">
+                                <div>
+                                    <div>Test Name</div>
+                                    <p class="text-muted small">Lorem, ipsum, dolor.</p>
+                                </div>
+                            </div>
+                            <div class="d-flex">
+                                <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava3.webp" alt="avatar" class="rounded-circle img-fluid" style="width: 50px; height: 50px;">
+                                <div>
+                                    <div>Test Name</div>
+                                    <p class="text-muted small">Lorem, ipsum, dolor.</p>
+                                </div>
+                            </div>
+                            <div class="d-flex">
+                                <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava3.webp" alt="avatar" class="rounded-circle img-fluid" style="width: 50px; height: 50px;">
+                                <div>
+                                    <div>Test Name</div>
+                                    <p class="text-muted small">Lorem, ipsum, dolor.</p>
+                                </div>
+                            </div>
+                            <div class="d-flex">
+                                <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava3.webp" alt="avatar" class="rounded-circle img-fluid" style="width: 50px; height: 50px;">
+                                <div>
+                                    <div>Test Name</div>
+                                    <p class="text-muted small">Lorem, ipsum, dolor.</p>
+                                </div>
+                            </div>
+                            <div class="d-flex">
+                                <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava3.webp" alt="avatar" class="rounded-circle img-fluid" style="width: 50px; height: 50px;">
+                                <div>
+                                    <div>Test Name</div>
+                                    <p class="text-muted small">Lorem, ipsum, dolor.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Main -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+
+</html>
