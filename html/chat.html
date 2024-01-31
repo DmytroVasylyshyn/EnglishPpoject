@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/0ade3ab419.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../css/base.css">
+    <title>Chat</title>
+</head>
+
+<body class="d-flex flex-column min-vh-100">
+    <!-- Nav Bar -->
+    <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <!-- Offcanvas triger -->
+            <button class="navbar-toggler me-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- Offcanvas triger -->
+            <a class="navbar-brand fw-bold me-auto" href="#">Test Logo</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <form class="d-flex ms-auto">
+                    <div class="input-group my-3 my-lg-0">
+                        <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="button-addon2">
+                        <button class="btn btn-outline-secondary" type="button" id="button-addon2"><i class="fa-solid fa-magnifying-glass"></i></button>
+                    </div>
+                </form>
+                <ul class="navbar-nav mb-2 mb-lg-0">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fa-solid fa-user"></i>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Nav Bar -->
+    <!-- Offcanvas -->
+    <div class="offcanvas offcanvas-start bg-dark text-white sidebar-nav" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel" data-bs-backdrop="true">
+        <div class="offcanvas-body p-0">
+            <nav class="navbar-dark">
+                <ul class="navbar-nav">
+                    <li>
+                        <div class="text-muted small fw-bold text-uppercase px-3">Test</div>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-link px-3 active">
+                            <span class="me-2">
+                                <i class="fa-solid fa-house"></i>
+                            </span>
+                            <span>Home</span>
+                        </a>
+                        <a href="#" class="nav-link px-3 active">
+                            <span class="me-2">
+                                <i class="fa-regular fa-address-card"></i>
+                            </span>
+                            <span>Profile</span>
+                        </a>
+                        <a href="#" class="nav-link px-3 active">
+                            <span class="me-2">
+                                <i class="fa-solid fa-message"></i>
+                            </span>
+                            <span>Messages</span>
+                        </a>
+                        <a href="#" class="nav-link px-3 active">
+                            <span class="me-2">
+                                <i class="fa-solid fa-people-group"></i>
+                            </span>
+                            <span>Communiti</span>
+                        </a>
+                    </li>
+                    <li class="my-4">
+                        <hr class="dropdown-driver">
+                    </li>
+                    <li>
+                        <div class="text-muted small fw-bold text-uppercase px-3">Test</div>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-link px-3 active">
+                            <span class="me-2">
+                                <i class="fa-solid fa-question"></i>
+                            </span>
+                            <span>Support</span>
+                        </a>
+                        <a href="#" class="nav-link px-3 active">
+                            <span class="me-2">
+                                <i class="fa-regular fa-envelope"></i>
+                            </span>
+                            <span>Contacts</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <!-- Offcanvas -->
+    <!-- Main -->
+    <div class="main">
+        <!-- Chat -->
+        <section>
+            <div class="container py-5">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="card" id="chat3" style="border-radius: 15px;">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md-6 col-lg-5 col-xl-4 mb-4 mb-md-0">
+                                        <div class="p-3">
+                                            <div class="input-group rounded mb-3">
+                                                <input type="search" class="form-control rounded" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
+                                                <span class="input-group-text border-0" id="search-addon">
+                                                    <i class="fas fa-search"></i>
+                                                </span>
+                                            </div>
+                                            <!-- According -->
+                                            <div class="accordion accordion-flush" id="accordionFlushExample">
+                                                <!-- Add New Group -->
+                                                <div class="accordion-item">
+                                                    <h2 class="accordion-header" id="flush-headingOne">
+                                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                                                            <i class="fa-solid fa-plus"></i>
+                                                        </button>
+                                                    </h2>
+                                                    <div class="overflow-scroll accordion-collapse collapse p-2" id="flush-collapseOne" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                                                        <form>
+                                                            <div class="form-outline mb-4">
+                                                                <label class="form-label" for="groupName">Enter Group name</label>
+                                                                <input type="text" id="" class="form-control form-control-lg" />
+                                                            </div>
+                                                            <div class="form-outline mb-4">
+                                                                <label for="floatingTextarea">Description</label>
+                                                                <textarea class="form-control" placeholder="Leave a comment here" id=""></textarea>
+                                                            </div>
+                                                            <div class="d-flex justify-content-between">
+                                                                <div class="d-flex align-items-center">
+                                                                    <i class="fa-solid fa-lock"></i>
+                                                                    <div class="mx-2"><span>Make Private</span><br><span class="small text-muted">Can only be viewed by invites</span></div>
+                                                                </div>
+                                                                <div class="form-check">
+                                                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                                                </div>
+                                                            </div>
+                                                            <div class="d-flex justify-content-center mt-3">
+                                                                <button type="button" class="btn btn-outline-dark  btn-lg">Start chat</button>
+                                                            </div>
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                                <!-- Add New Group -->
+                                                <!-- Frends List -->
+                                                <div class="accordion-item">
+                                                    <h2 class="accordion-header" id="flush-headingTwo">
+                                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                                                            <i class="fa-solid fa-user-group"></i>
+                                                        </button>
+                                                    </h2>
+                                                    <div class="overflow-scroll accordion-collapse collapse" id="flush-collapseTwo" style="max-height: 500px;" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                                                        <ul class="list-unstyled mb-0 ">
+                                                            <li class="p-2 border-bottom">
+                                                                <a href="#!" class="d-flex justify-content-between">
+                                                                    <div class="d-flex flex-row">
+                                                                        <div>
+                                                                            <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava1-bg.webp" alt="avatar" class="d-flex align-self-center me-3" width="60">
+                                                                            <span class="badge bg-success badge-dot"></span>
+                                                                        </div>
+                                                                        <div class="pt-1">
+                                                                            <p class="fw-bold mb-0">Marie Horwitz</p>
+                                                                            <p class="small text-muted">Just Now</p>
+                                                                        </div>
+                                                                    </div>
+                                                                </a>
+                                                            </li>
+                                                            <li class="p-2">
+                                                                <a href="#!" class="d-flex justify-content-between">
+                                                                    <div class="d-flex flex-row">
+                                                                        <div>
+                                                                            <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava6-bg.webp" alt="avatar" class="d-flex align-self-center me-3" width="60">
+                                                                            <span class="badge bg-success badge-dot"></span>
+                                                                        </div>
+                                                                        <div class="pt-1">
+                                                                            <p class="fw-bold mb-0">Ben Smith</p>
+                                                                            <p class="small text-muted">Yesterday</p>
+                                                                        </div>
+                                                                    </div>
+                                                                </a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <!-- Frends List -->
+                                                <!-- Chat -->
+                                                <div class="accordion-item">
+                                                    <h2 class="accordion-header" id="flush-headingThree">
+                                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                                                            <i class="fa-solid fa-message"></i>
+                                                        </button>
+                                                    </h2>
+                                                    <div class="overflow-scroll accordion-collapse collapse" id="flush-collapseThree" style="max-height: 500px;" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                                                        <ul class="list-unstyled mb-0 ">
+                                                            <li class="p-2 border-bottom">
+                                                                <a href="#!" class="d-flex justify-content-between">
+                                                                    <div class="d-flex flex-row">
+                                                                        <div>
+                                                                            <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava1-bg.webp" alt="avatar" class="d-flex align-self-center me-3" width="60">
+                                                                            <span class="badge bg-success badge-dot"></span>
+                                                                        </div>
+                                                                        <div class="pt-1">
+                                                                            <p class="fw-bold mb-0">Marie Horwitz</p>
+                                                                            <p class="small text-muted">Hello, Are you there?</p>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="pt-1">
+                                                                        <p class="small text-muted mb-1">Just now</p>
+                                                                        <span class="badge bg-danger rounded-pill float-end">3</span>
+                                                                    </div>
+                                                                </a>
+                                                            </li>
+                                                            <li class="p-2">
+                                                                <a href="#!" class="d-flex justify-content-between">
+                                                                    <div class="d-flex flex-row">
+                                                                        <div>
+                                                                            <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava6-bg.webp" alt="avatar" class="d-flex align-self-center me-3" width="60">
+                                                                            <span class="badge bg-success badge-dot"></span>
+                                                                        </div>
+                                                                        <div class="pt-1">
+                                                                            <p class="fw-bold mb-0">Ben Smith</p>
+                                                                            <p class="small text-muted">Lorem ipsum dolor sit.</p>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="pt-1">
+                                                                        <p class="small text-muted mb-1">Yesterday</p>
+                                                                    </div>
+                                                                </a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <!-- Chat -->
+                                            </div>
+                                            <!-- According -->
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-lg-7 col-xl-8 ">
+                                        <div class="pt-3 pe-3 overflow-scroll" style="max-height: 500px;">
+                                            <div class="d-flex flex-row justify-content-end">
+                                                <div>
+                                                    <p class="small p-2 me-3 mb-1 text-white rounded-3 bg-primary">Ut enim ad minim veniam,
+                                                        quis
+                                                        nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                                                    <p class="small me-3 mb-3 rounded-3 text-muted">12:00 PM | Aug 13</p>
+                                                </div>
+                                                <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava1-bg.webp" alt="avatar 1" style="width: 45px; height: 100%;">
+                                            </div>
+                                            <div class="d-flex flex-row justify-content-start">
+                                                <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava6-bg.webp" alt="avatar 1" style="width: 45px; height: 100%;">
+                                                <div>
+                                                    <p class="small p-2 ms-3 mb-1 rounded-3" style="background-color: #f5f6f7;">Duis aute
+                                                        irure
+                                                        dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                                                    </p>
+                                                    <p class="small ms-3 mb-3 rounded-3 text-muted float-end">12:00 PM | Aug 13</p>
+                                                </div>
+                                            </div>
+                                            <div class="d-flex flex-row justify-content-end">
+                                                <div>
+                                                    <p class="small p-2 me-3 mb-1 text-white rounded-3 bg-primary">Excepteur sint occaecat
+                                                        cupidatat
+                                                        non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                                    <p class="small me-3 mb-3 rounded-3 text-muted">12:00 PM | Aug 13</p>
+                                                </div>
+                                                <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava1-bg.webp" alt="avatar 1" style="width: 45px; height: 100%;">
+                                            </div>
+                                            <div class="d-flex flex-row justify-content-start">
+                                                <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava6-bg.webp" alt="avatar 1" style="width: 45px; height: 100%;">
+                                                <div>
+                                                    <p class="small p-2 ms-3 mb-1 rounded-3" style="background-color: #f5f6f7;">Sed ut
+                                                        perspiciatis
+                                                        unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam
+                                                        rem
+                                                        aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae
+                                                        dicta
+                                                        sunt explicabo.</p>
+                                                    <p class="small ms-3 mb-3 rounded-3 text-muted float-end">12:00 PM | Aug 13</p>
+                                                </div>
+                                            </div>
+                                            <div class="d-flex flex-row justify-content-end">
+                                                <div>
+                                                    <p class="small p-2 me-3 mb-1 text-white rounded-3 bg-primary">Nemo enim ipsam
+                                                        voluptatem quia
+                                                        voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos
+                                                        qui
+                                                        ratione voluptatem sequi nesciunt.</p>
+                                                    <p class="small me-3 mb-3 rounded-3 text-muted">12:00 PM | Aug 13</p>
+                                                </div>
+                                                <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava1-bg.webp" alt="avatar 1" style="width: 45px; height: 100%;">
+                                            </div>
+                                            <div class="d-flex flex-row justify-content-start">
+                                                <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava6-bg.webp" alt="avatar 1" style="width: 45px; height: 100%;">
+                                                <div>
+                                                    <p class="small p-2 ms-3 mb-1 rounded-3" style="background-color: #f5f6f7;">Neque porro
+                                                        quisquam
+                                                        est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non
+                                                        numquam
+                                                        eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p>
+                                                    <p class="small ms-3 mb-3 rounded-3 text-muted float-end">12:00 PM | Aug 13</p>
+                                                </div>
+                                            </div>
+                                            <div class="d-flex flex-row justify-content-end">
+                                                <div>
+                                                    <p class="small p-2 me-3 mb-1 text-white rounded-3 bg-primary">Ut enim ad minima veniam,
+                                                        quis
+                                                        nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea
+                                                        commodi
+                                                        consequatur?</p>
+                                                    <p class="small me-3 mb-3 rounded-3 text-muted">12:00 PM | Aug 13</p>
+                                                </div>
+                                                <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava1-bg.webp" alt="avatar 1" style="width: 45px; height: 100%;">
+                                            </div>
+                                        </div>
+                                        <div class="text-muted d-flex justify-content-start align-items-center pe-3 pt-3 mt-2">
+                                            <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava6-bg.webp" alt="avatar 3" style="width: 40px; height: 100%;">
+                                            <input type="text" class="form-control form-control-lg" id="exampleFormControlInput2" placeholder="Type message">
+                                            <a class="ms-1 text-muted" href="#!"><i class="fas fa-paperclip"></i></a>
+                                            <a class="ms-3 text-muted" href="#!"><i class="fas fa-smile"></i></a>
+                                            <a class="ms-3" href="#!"><i class="fas fa-paper-plane"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Chat -->
+    </div>
+    <!-- Main -->
+    <!-- Footer -->
+    <!-- Remove the container if you want to extend the Footer to full width. -->
+    <footer class="footer mt-auto text-center text-white">
+        <!-- Grid container -->
+        <div class="container pt-4">
+            <!-- Section: Social media -->
+            <section class="mb-4">
+                <!-- Facebook -->
+                <a class="btn btn-link btn-floating btn-lg text-dark m-1" href="#!" role="button" data-mdb-ripple-color="dark"><i class="fab fa-facebook-f"></i></a>
+                <!-- Twitter -->
+                <a class="btn btn-link btn-floating btn-lg text-dark m-1" href="#!" role="button" data-mdb-ripple-color="dark"><i class="fab fa-twitter"></i></a>
+                <!-- Google -->
+                <a class="btn btn-link btn-floating btn-lg text-dark m-1" href="#!" role="button" data-mdb-ripple-color="dark"><i class="fab fa-google"></i></a>
+                <!-- Instagram -->
+                <a class="btn btn-link btn-floating btn-lg text-dark m-1" href="#!" role="button" data-mdb-ripple-color="dark"><i class="fab fa-instagram"></i></a>
+                <!-- Linkedin -->
+                <a class="btn btn-link btn-floating btn-lg text-dark m-1" href="#!" role="button" data-mdb-ripple-color="dark"><i class="fab fa-linkedin"></i></a>
+                <!-- Github -->
+                <a class="btn btn-link btn-floating btn-lg text-dark m-1" href="#!" role="button" data-mdb-ripple-color="dark"><i class="fab fa-github"></i></a>
+            </section>
+            <!-- Section: Social media -->
+        </div>
+        <!-- Grid container -->
+        <!-- Copyright -->
+        <div class="text-center text-dark p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+            © 2024 Copyright:
+            <a class="text-dark" href="#">Test.com</a>
+        </div>
+        <!-- Copyright -->
+    </footer>
+    <!-- End of .container -->
+    <!-- Footer -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+
+</html>
