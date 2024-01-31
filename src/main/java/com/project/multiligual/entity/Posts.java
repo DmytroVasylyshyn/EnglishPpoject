@@ -1,8 +1,6 @@
 package com.project.multiligual.entity;
 
 import jakarta.persistence.*;
-
-import java.awt.*;
 import java.util.Date;
 
 @Entity
@@ -14,10 +12,34 @@ public class Posts {
     private String fulltext;
     private String anons;
     private Date date;
+    private int likes;
+    private String link;
+
+
+    @Lob
+    private byte[] photo;
+
     @ManyToOne
     @JoinColumn(name = "user_id")
     private User user;
 
+
+
+    public String getLink() {
+        return link;
+    }
+
+    public void setLink(String link) {
+        this.link = link;
+    }
+
+    public int getLikes() {
+        return likes;
+    }
+
+    public void setLikes(int likes) {
+        this.likes = likes;
+    }
 
     public Date getDate() {
         return date;
@@ -43,14 +65,6 @@ public class Posts {
         this.title = title;
     }
 
-    public User getUser() {
-        return user;
-    }
-
-    public void setUser(User user) {
-        this.user = user;
-    }
-
     public String getFulltext() {
         return fulltext;
     }
@@ -65,5 +79,21 @@ public class Posts {
 
     public void setAnons(String anons) {
         this.anons = anons;
+    }
+
+    public byte[] getPhoto() {
+        return photo;
+    }
+
+    public void setPhoto(byte[] photo) {
+        this.photo = photo;
+    }
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
     }
 }

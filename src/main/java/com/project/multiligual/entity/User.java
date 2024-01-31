@@ -22,6 +22,29 @@ public class User {
     private int languageid;
     private String qualification;
 
+    public User(String username) {
+        this.username = username;
+    }
+
+    public User() {
+    }
+
+    public User(String username, String email, String password, String qualification) {
+        this.username = username;
+        this.email = email;
+        this.password = password;
+        this.qualification=qualification;
+    }
+
+    public User(String usersurname, String phonenumber, int age, String address, int languageid, String qualification) {
+        this.usersurname = usersurname;
+        this.phonenumber = phonenumber;
+        this.age = age;
+        this.address = address;
+        this.languageid = languageid;
+        this.qualification = qualification;
+    }
+
     public String getAddress() {
         return address;
     }

@@ -1,13 +1,12 @@
-
 <!DOCTYPE html>
-<html xmlns:th="http://www.thmeleaf.org">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/0ade3ab419.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="wellcome.css">
+    <link rel="stylesheet" href="css/welcome.css">
     <title>Welcome</title>
 </head>
 
@@ -34,7 +33,7 @@
                                 <input type="password" id="password" class="form-control form-control-lg" />
                             </div>
                             <p class="small mb-5 pb-lg-2"><a class="text-white-50" href="#!">Forgot password?</a></p>
-                            <button class="btn btn-outline-light btn-lg px-5" type="button" onclick="window.location.href='/feed'">Login</button>
+                            <button class="btn btn-outline-light btn-lg px-5" type="submit">Login</button>
                         </form>
                         <div class="d-flex justify-content-center text-center mt-4 pt-1">
                             <a href="#!" class="text-white"><i class="fab fa-facebook-f fa-lg"></i></a>
@@ -58,34 +57,33 @@
                         <button type="button" class="btn text-white" data-bs-dismiss="modal" aria-label="Close"><i class="fa-solid fa-xmark fa-2x"></i></button>
                     </div>
                     <h2 class="text-uppercase fw-bold text-center mb-5">Create an account</h2>
-                    <form>
+                    <form method="post">
                         <div class="form-outline mb-4">
                             <label class="form-label" for="form3Example1cg">Your Name</label>
-                            <input type="text" id="form3Example1cg" class="form-control form-control-lg" />
+                            <input type="text" id="form3Example1cg" class="form-control form-control-lg" name="username" placeholder="Name" />
                         </div>
                         <div class="form-outline mb-4">
                             <label class="form-label" for="form3Example3cg">Your Email</label>
-                            <input type="email" id="form3Example3cg" class="form-control form-control-lg" />
+                            <input type="email" id="form3Example3cg" class="form-control form-control-lg" name="email" placeholder="Email@gmail.com"/>
                         </div>
                         <div class="form-outline mb-4">
                             <label class="form-label" for="form3Example4cg">Password</label>
-                            <input type="password" id="form3Example4cg" class="form-control form-control-lg" />
+                            <input type="password" id="form3Example4cg" class="form-control form-control-lg" name="password" placeholder="Password" />
                         </div>
                         <div class="form-outline mb-4">
                             <label class="form-label" for="form3Example4cdg">Repeat your password</label>
-                            <input type="password" id="form3Example4cdg" class="form-control form-control-lg" />
+                            <input type="password" id="form3Example4cdg" class="form-control form-control-lg" name="repead_password" placeholder="Password" />
                         </div>
+                        <div id="error-message" class="text-danger"></div>
                         <!-- Radio -->
-                        <div class="d-flex justify-content-between">
-                            <div class="form-check form-switch">
-                                <input class="form-check-input" type="radio" name="collapseGroup" value="no" checked>
-                                <label class="form-check-label" for="flexSwitchCheckChecked">Student</label>
-                            </div>
-                            <div class="form-check form-switch">
-                                <input class="form-check-input" type="radio" name="collapseGroup" value="yes">
-                                <label class="form-check-label" for="flexSwitchCheckDefault">Teacher</label>
-                            </div>
+                        <div class="form-outline mb-4">
+                            <label class="form-label" for="userType">Select User Type:</label>
+                            <select class="form-control" id="userType" name="userType">
+                                <option value="teacher">Teacher</option>
+                                <option value="student">Student</option>
+                            </select>
                         </div>
+
                         <!-- Radio -->
                         <div class="form-check d-flex justify-content-center mb-4">
                             <input class="form-check-input me-2" type="checkbox" value="" id="form2Example3cg" />
@@ -99,7 +97,7 @@
                             <a href="#!" class="text-white"><i class="fab fa-google fa-lg"></i></a>
                         </div>
                         <div class="d-flex justify-content-center mt-4">
-                            <button type="button" class="btn btn-outline-light btn-lg px-5" onclick="window.location.href='/profile'">Register</button>
+                            <button type="submit" class="btn btn-outline-light btn-lg px-5" id="registerButton">Register</button>
                         </div>
                     </form>
                 </div>
@@ -107,6 +105,32 @@
         </div>
     </div>
 </div>
+
+
+<script>
+    const password = document.getElementById('form3Example4cg');
+    const repeatPassword = document.getElementById('form3Example4cdg');
+    const registerButton = document.getElementById('registerButton'); // Кнопка "Зареєструватись"
+    const errorMessage = document.getElementById('error-message');
+    const name = document.getElementById('form3Example1cg');
+    const email = document.getElementById('form3Example3cg');
+
+    repeatPassword.addEventListener('input', function () {
+        if (!password.value || !repeatPassword.value || !name.value || !email.value) {
+            registerButton.disabled = true;
+            errorMessage.textContent = 'Будь ласка заповніть усі поля';
+        } else {
+            if (password.value === repeatPassword.value) {
+                registerButton.disabled = false;
+                errorMessage.textContent = '';
+            } else {
+                registerButton.disabled = true;
+                errorMessage.textContent = 'Паролі не співпадають';
+            }
+        }
+
+    });
+</script>
 <!-- Modal Register -->
 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#teacherModal">
     Launch demo modal
@@ -117,10 +141,14 @@
         <div class="modal-content" style="border-radius: 1rem;">
             <div class="card modal-body bg-dark text-white" style="border-radius: 15px;">
                 <div class="card-body p-5">
-                    <h2 class="text-uppercase fw-bold text-center mb-5">Register like a teacher</h2>
+                    <h2 class="text-uppercase fw-bold text-center mb-5">Register as a teacher</h2>
                     <form>
                         <div class="form-outline mb-4">
-                            <label class="form-label" for="form3Example1cg">Description</label>
+                            <label class="form-label" for="form3Example1cg">Education</label>
+                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                        </div>
+                        <div class="form-outline mb-4">
+                            <label class="form-label" for="form3Example1cg">Experience</label>
                             <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
                         </div>
                         <div class="mb-3">

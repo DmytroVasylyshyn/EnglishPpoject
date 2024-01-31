@@ -214,6 +214,7 @@
                             <div>
                                 <p th:text="${el.user.usersurname + ' ' + el.user.username}"/>
                                 <h5 class="card-title font-weight-bold mb-2" th:text="${el.title}"/>
+                                <img th:src="|data:image/jpeg;base64,${el.photo}|"/>
                             </div>
 
                         </div>
