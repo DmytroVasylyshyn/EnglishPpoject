@@ -16,7 +16,7 @@ body {
         overflow: auto !important;
     }
 
-    .main {
+    .main, .footer {
         margin-left: var(--offcanvas-width);
     }
 
