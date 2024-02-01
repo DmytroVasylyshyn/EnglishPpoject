@@ -286,6 +286,30 @@
     </div>
     </div>
     <!-- Modal Add User Post -->
+    <!-- Modal Report -->
+    <div class="modal fade" id="reportModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content" style="border-radius: 1rem;">
+                <div class="card modal-body bg-dark text-white" style="border-radius: 1rem;">
+                    <div class="card-body px-5 text-center">
+                        <div class="mb-md-5 mt-md-4 pb-2">
+                            <div class="d-flex justify-content-end">
+                                <button type="button" class="btn text-white" data-bs-dismiss="modal" aria-label="Close"><i class="fa-solid fa-xmark fa-2x"></i></button>
+                            </div>
+                            <h2 class="fw-bold mb-2 text-uppercase text-danger">Report</h2>
+                            <form>
+                                <div class="form-outline mb-4">
+                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="State the reason"></textarea>
+                                </div>
+                                <button class="btn btn-outline-danger btn-lg px-5" type="submit">Save</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal Report -->
     <!-- Main -->
     <div class="main">
         <div class="container-fluid">
@@ -299,16 +323,18 @@
                                 <span class="small text-muted">Teacher Jan 1 1998</span>
                             </div>
                             <!-- Buttons for followers -->
-                            <!-- <div class="d-flex justify-content-center mb-2">
-                                <button type="button" class="btn btn-dark">Follow</button>
-                                <button type="button" class="btn btn-outline-dark ms-1">Message</button>
-                            </div>
-                            <button class="btn btn-outline-dark w-100">Add frends</button> -->
-                            <!-- Buttons for followers -->
                             <div class="d-flex justify-content-center mb-2">
+                                <button type="button" class="btn btn-dark">Follow</button>
+                                <button type="button" class="btn btn-outline-dark mx-2">Message</button>
+                                <button class="btn btn-outline-dark">Add frends</button>
+                            </div>
+                            <!-- Buttons for followers -->
+                            <!-- Buttons for user    -->
+                            <!-- <div class="d-flex justify-content-center mb-2">
                                 <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#addNewPost">Add Post</button>
                                 <button type="button" class="btn btn-outline-dark ms-1" data-bs-toggle="modal" data-bs-target="#editUserProfile">Edit Profile</button>
-                            </div>
+                            </div> -->
+                            <!-- Buttons for user -->
                             <div class="d-flex justify-content-between px-2">
                                 <div class="">
                                     <p class="h5">Frends</p>
@@ -381,8 +407,9 @@
                             </div>
                             <p class="h4 fw-bold">Score: 3458</p>
                             <div class="">
-                                <a href="#"><i class="fa-regular fa-calendar text-dark fa-3x mt-3"></i></a>
-                                <a href="#"><i class="fa-solid fa-circle-info text-dark fa-3x m-3"></i></a>
+                                <a href="#"><i class="fa-regular fa-calendar text-dark fa-2x mt-3"></i></a>
+                                <a href="#"><i class="fa-solid fa-circle-info text-dark fa-2x m-3"></i></a>
+                                <a href="#" data-bs-toggle="modal" data-bs-target="#reportModal"><i class="fa-solid fa-flag text-danger fa-2x"></i></a>
                             </div>
                         </div>
                     </div>
