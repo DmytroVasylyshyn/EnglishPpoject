@@ -108,276 +108,7 @@
         </div>
     </div>
     <!-- Offcanvas -->
-    <!-- Modal Edit User Profile -->
-    <div class="modal fade" id="editUserProfile" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content" style="border-radius: 1rem;">
-                <div class="card modal-body bg-dark text-white" style="border-radius: 1rem;">
-                    <div class="card-body px-5">
-                        <div class="mb-md-5 mt-md-4 pb-2">
-                            <div class="d-flex justify-content-end">
-                                <button type="button" class="btn text-white" data-bs-dismiss="modal" aria-label="Close"><i class="fa-solid fa-xmark fa-2x"></i></button>
-                            </div>
-                            <h2 class="text-uppercase fw-bold text-center mb-5">Edit User Profile</h2>
-                            <form action="">
-                                <!-- Change avatar -->
-                                <div class="mb-3">
-                                    <label for="formFile" class="form-label">Select img</label>
-                                    <input class="form-control" type="file" id="formFile">
-                                </div>
-                                <!-- Change avatar -->
-                                <!-- Change username -->
-                                <div class="form-outline mb-4">
-                                    <label class="form-label" for="form3Example1cg">User Name</label>
-                                    <input type="text" id="form3Example1cg" class="form-control form-control-lg" value="Test User" />
-                                </div>
-                                <!-- Change username -->
-                                <!-- Change user email -->
-                                <div class="form-outline mb-4">
-                                    <label class="form-label" for="form3Example3cg">User Email</label>
-                                    <input type="email" id="form3Example3cg" class="form-control form-control-lg" value="test_email@test.com" />
-                                </div>
-                                <!-- Change user email -->
-                                <!-- Change Title -->
-                                <div class="form-outline mb-4">
-                                    <label class="form-label" for="form3Example3cg">About</label>
-                                    <input type="email" id="form3Example3cg" class="form-control form-control-lg" placeholder="Title" />
-                                </div>
-                                <div class="form-outline mb-4">
-                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="My bio"></textarea>
-                                </div>
-                                <!-- Change Title -->
-                                <div class="d-flex justify-content-center mt-4">
-                                    <button type="button" class="btn btn-outline-light btn-lg px-5">Save</button>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Modal Edit User Profile -->
-    <!-- Modal Add User Post -->
-    <div class="modal fade" id="addNewPost" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg modal-dialog-centered">
-            <div class="modal-content" style="border-radius: 1rem;">
-                <div class="card modal-body bg-dark text-white" style="border-radius: 1rem;">
-                    <div class="card-body px-5">
-                        <div class="mb-md-5 mt-md-4 pb-2">
-                            <div class="d-flex justify-content-end">
-                                <button type="button" class="btn text-white" data-bs-dismiss="modal" aria-label="Close"><i class="fa-solid fa-xmark fa-2x"></i></button>
-                            </div>
-                            <h2 class="text-uppercase fw-bold text-center mb-5">Add new post</h2>
-                            <form action="">
-                                <!-- Title -->
-                                <div class="form-outline mb-4">
-                                    <input type="text" id="form3Example1cg" class="form-control form-control-lg" placeholder="Title" />
-                                </div>
-                                <!-- Title -->
-                                <!-- Text -->
-                                <div class="form-outline mb-4">
-                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Text"></textarea>
-                                </div>
-                                <!-- Text -->
-                                <!-- Collapse -->
-                                <div class="row">
-                                    <!-- Clobal Taggs -->
-                                    <div class="col text-center">
-                                        <button class="btn btn-outline-light" type="button" data-bs-toggle="collapse" data-bs-target="#globalTaggs" aria-expanded="false" aria-controls="globalTaggs">
-                                            Global Taggs
-                                        </button>
-                                        <div class="collapse mt-3" id="globalTaggs">
-                                            <div class="card card-body text-dark">
-                                                <div class="row">
-                                                    <div class="col-lg-4">
-                                                        <div class="form-check">
-                                                            <input class="form-check-input" type="checkbox" value="" id="English">
-                                                            <label class="form-check-label" for="English">
-                                                                English
-                                                            </label>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-lg-4">
-                                                        <div class="form-check">
-                                                            <input class="form-check-input" type="checkbox" value="" id="German">
-                                                            <label class="form-check-label" for="German">
-                                                                German
-                                                            </label>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-lg-4">
-                                                        <div class="form-check">
-                                                            <input class="form-check-input" type="checkbox" value="" id="French">
-                                                            <label class="form-check-label" for="French">
-                                                                French
-                                                            </label>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-lg-4">
-                                                        <div class="form-check">
-                                                            <input class="form-check-input" type="checkbox" value="" id="Italy">
-                                                            <label class="form-check-label" for="Italy">
-                                                                Italy
-                                                            </label>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- Clobal Taggs -->
-                                    <!-- Secondary Taggs -->
-                                    <div class="col text-center">
-                                        <button class="btn btn-outline-light" type="button" data-bs-toggle="collapse" data-bs-target="#secondaryTaggs" aria-expanded="false" aria-controls="secondaryTaggs">
-                                            Secondary Taggs
-                                        </button>
-                                        <div class="collapse mt-3" id="secondaryTaggs">
-                                            <div class="card card-body text-dark">
-                                                <div class="row">
-                                                    <div class="col-lg-4">
-                                                        <div class="form-check">
-                                                            <input class="form-check-input" type="checkbox" value="" id="English">
-                                                            <label class="form-check-label" for="English">
-                                                                Books
-                                                            </label>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-lg-4">
-                                                        <div class="form-check">
-                                                            <input class="form-check-input" type="checkbox" value="" id="German">
-                                                            <label class="form-check-label" for="German">
-                                                                Language
-                                                            </label>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-lg-4">
-                                                        <div class="form-check">
-                                                            <input class="form-check-input" type="checkbox" value="" id="French">
-                                                            <label class="form-check-label" for="French">
-                                                                Game
-                                                            </label>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-lg-4">
-                                                        <div class="form-check">
-                                                            <input class="form-check-input" type="checkbox" value="" id="Italy">
-                                                            <label class="form-check-label" for="Italy">
-                                                                Free
-                                                            </label>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- Secondary Taggs -->
-                        </div>
-                        <!-- Collapse -->
-                        <div class="d-flex justify-content-center mt-4">
-                            <button type="button" class="btn btn-outline-light btn-lg px-5">Save</button>
-                        </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    </div>
-    <!-- Modal Add User Post -->
-    <!-- Modal Change User Password -->
-    <div class="modal fade" id="changePassword" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content" style="border-radius: 1rem;">
-                <div class="card modal-body bg-dark text-white" style="border-radius: 1rem;">
-                    <div class="card-body px-5">
-                        <div class="mb-md-5 mt-md-4 pb-2 text-center">
-                            <div class="d-flex justify-content-end">
-                                <button type="button" class="btn text-white" data-bs-dismiss="modal" aria-label="Close"><i class="fa-solid fa-xmark fa-2x"></i></button>
-                            </div>
-                            <h2 class="text-uppercase fw-bold text-center mb-5">Change Password</h2>
-                            <p class="text-white-50 mb-5 text-center">Please enter your old password and come up with a new one!</p>
-                            <form>
-                                <div class="form-outline mb-4">
-                                    <label class="form-label" for="oldPassword">Old Password</label>
-                                    <input type="password" id="oldPassword" class="form-control form-control-lg" />
-                                </div>
-                                <div class="form-outline form-white mb-4">
-                                    <label class="form-label" for="newPassword">New Password</label>
-                                    <input type="text" id="newPassword" class="form-control form-control-lg" />
-                                </div>
-                                <div class="form-outline form-white mb-4">
-                                    <label class="form-label" for="confirmNewPassword">Confirm New Password</label>
-                                    <input type="password" id="confirmNewPassword" class="form-control form-control-lg" />
-                                </div>
-                                <button class="btn btn-outline-light btn-lg px-5" type="submit">Save</button>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Modal Change User Password -->
-    <!-- Modal Overview -->
-    <div class="modal fade" id="overView" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg modal-dialog-centered">
-            <div class="modal-content" style="border-radius: 1rem;">
-                <div class="card modal-body bg-dark text-white" style="border-radius: 1rem;">
-                    <div class="card-body px-5">
-                        <div class="mb-md-5 mt-md-4 pb-2">
-                            <div class="d-flex justify-content-end">
-                                <button type="button" class="btn text-white" data-bs-dismiss="modal" aria-label="Close"><i class="fa-solid fa-xmark fa-2x"></i></button>
-                            </div>
-                            <h2 class="fw-bold mb-5">Overview</h2>
-                            <form action="">
-                                <div class="form-outline mb-4">
-                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="10">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut maiores aperiam, rerum, illo tempore sint magni. Sed delectus minus beatae quae labore unde impedit, quasi cum a fugit earum voluptatibus laboriosam nihil eum numquam distinctio necessitatibus ex perspiciatis, id tempora. Qui ex, minima harum ab saepe aut id nisi neque sint, nihil nostrum quibusdam sunt excepturi sequi provident quam iusto quas voluptatem unde adipisci! Quam, voluptas inventore doloribus reprehenderit voluptate, rem et mollitia. Perspiciatis quae nulla, id officiis. Voluptas praesentium, delectus. Accusamus labore modi eaque enim dolore delectus nesciunt rem, aut dicta harum accusantium numquam natus eveniet, a sit non.</textarea>
-                                </div>
-                                <div class="d-flex justify-content-center mt-4">
-                                    <button type="button" class="btn btn-outline-light btn-lg px-5">Save</button>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Modal Overview -->
-    <!-- Modal Language List -->
-    <div class="modal fade" id="languageList" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg modal-dialog-centered">
-            <div class="modal-content" style="border-radius: 1rem;">
-                <div class="card modal-body bg-dark text-white" style="border-radius: 1rem;">
-                    <div class="card-body px-5">
-                        <div class="mb-md-5 mt-md-4 pb-2">
-                            <div class="d-flex justify-content-end">
-                                <button type="button" class="btn text-white" data-bs-dismiss="modal" aria-label="Close"><i class="fa-solid fa-xmark fa-2x"></i></button>
-                            </div>
-                            <h2 class="fw-bold mb-5">Language list</h2>
-                            <form action="">
-                                <div class="my-3">
-                                    <a class="link-light" href="#"><span class="border border-secondary p-2 text-white rounded-pill bg-secondary">English<i class="fa-solid fa-xmark"></i></span></a>
-                                    <a class="link-light" href="#"><span class="border border-secondary p-2 text-white rounded-pill bg-secondary">German<i class="fa-solid fa-xmark"></i></span></a>
-                                </div>
-                                <div class="form-outline mb-4">
-                                    <div class="form-outline mb-4">
-                                        <input type="text" id="" class="form-control form-control-lg" placeholder="Enter language" />
-                                    </div>
-                                </div>
-                                <div class="d-flex justify-content-center mt-4">
-                                    <button type="button" class="btn btn-outline-light btn-lg px-5">Save</button>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Modal Language List -->
+ 
     <!-- Main -->
     <div class="main">
         <div class="container-fluid">
@@ -395,14 +126,6 @@
                                 <button type="button" class="btn btn-dark">Add frends</button>
                                 <button type="button" class="btn btn-outline-dark ms-1">Message</button>
                             </div>
-                            <!-- Button for followers -->
-                            <!-- Buttons for user -->
-                            <!--   <div class="d-flex justify-content-center mb-2">
-                                <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#addNewPost">Add Post</button>
-                                <button type="button" class="btn btn-outline-dark ms-1" data-bs-toggle="modal" data-bs-target="#editUserProfile">Edit Profile</button>
-                            </div>
-                            <button type="button" class="btn btn-outline-dark ms-1" data-bs-toggle="modal" data-bs-target="#changePassword">Change Password</button> -->
-                            <!-- Buttons for user -->
                             <div class="d-flex justify-content-between px-2">
                                 <div class="">
                                     <p class="h5">Frends</p>
@@ -483,21 +206,10 @@
                     <!-- Frends list -->
                 </div>
                 <div class="col-lg-6 mt-4 ">
-                    <div class="card mb-5">
-                        <div class="card-body text-left">
-                            <p class="h4 fw-bold">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                            <p class="h5 text-muted">Lorem, ipsum dolor sit amet.</p>
-                            <div class="">
-                                <a href="#"><i class="fa-regular fa-calendar text-dark fa-2x mt-3"></i></a>
-                                <a href="#"><i class="fa-solid fa-circle-info text-dark fa-2x m-3"></i></a>
-                            </div>
-                        </div>
-                    </div>
                     <div class="card">
                         <div class="card-body">
                             <div class="d-flex justify-content-between">
                                 <p class="h4 fw-bold">Overview</p>
-                                <a href="#" data-bs-toggle="modal" data-bs-target="#overView"><i class="fa-solid fa-pen-to-square text-dark"></i></a>
                             </div>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut maiores aperiam, rerum, illo tempore sint magni. Sed delectus minus beatae quae labore unde impedit, quasi cum a fugit earum voluptatibus laboriosam nihil eum numquam distinctio necessitatibus ex perspiciatis, id tempora. Qui ex, minima harum ab saepe aut id nisi neque sint, nihil nostrum quibusdam sunt excepturi sequi provident quam iusto quas voluptatem unde adipisci! Quam, voluptas inventore doloribus reprehenderit voluptate, rem et mollitia. Perspiciatis quae nulla, id officiis. Voluptas praesentium, delectus. Accusamus labore modi eaque enim dolore delectus nesciunt rem, aut dicta harum accusantium numquam natus eveniet, a sit non.</p>
                         </div>
@@ -506,7 +218,6 @@
                         <div class="card-body">
                             <div class="d-flex justify-content-between mb-4">
                                 <p class="h4 fw-bold">Language</p>
-                                <a href="#" data-bs-toggle="modal" data-bs-target="#languageList"><i class="fa-solid fa-pen-to-square text-dark"></i></a>
                             </div>
                             <span class="border border-secondary mx-2 p-2 text-white rounded-pill bg-secondary">English</span>
                             <span class="border border-secondary mx-2 p-2 text-white rounded-pill bg-secondary">German</span>
