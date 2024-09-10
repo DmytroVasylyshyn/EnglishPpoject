@@ -1,13 +1,14 @@
+
 <!DOCTYPE html>
 <html lang="en">
-<html xmlns:th="http://www.thmeleaf.org">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/0ade3ab419.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="base.css">
-    <title>Student profile</title>
+    <title>Student info</title>
 </head>
 
 <body class="d-flex flex-column min-vh-100">
@@ -19,7 +20,7 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <!-- Offcanvas triger -->
-        <a class="navbar-brand fw-bold me-auto" href="/posts">Test Logo</a>
+        <a class="navbar-brand fw-bold me-auto" href="#">Test Logo</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -64,19 +65,19 @@
                             </span>
                         <span>Home</span>
                     </a>
-                    <a href="#" class="nav-link px-3 active">
+                    <a href="/profile" class="nav-link px-3 active">
                             <span class="me-2">
                                 <i class="fa-regular fa-address-card"></i>
                             </span>
                         <span>Profile</span>
                     </a>
-                    <a href="#" class="nav-link px-3 active">
+                    <a href="/messages" class="nav-link px-3 active">
                             <span class="me-2">
                                 <i class="fa-solid fa-message"></i>
                             </span>
                         <span>Messages</span>
                     </a>
-                    <a href="#" class="nav-link px-3 active">
+                    <a href="/community" class="nav-link px-3 active">
                             <span class="me-2">
                                 <i class="fa-solid fa-people-group"></i>
                             </span>
@@ -90,13 +91,13 @@
                     <div class="text-muted small fw-bold text-uppercase px-3">Test</div>
                 </li>
                 <li>
-                    <a href="#" class="nav-link px-3 active">
+                    <a href="/error" class="nav-link px-3 active">
                             <span class="me-2">
                                 <i class="fa-solid fa-question"></i>
                             </span>
                         <span>Support</span>
                     </a>
-                    <a href="#" class="nav-link px-3 active">
+                    <a href="/error" class="nav-link px-3 active">
                             <span class="me-2">
                                 <i class="fa-regular fa-envelope"></i>
                             </span>
@@ -119,36 +120,36 @@
                             <button type="button" class="btn text-white" data-bs-dismiss="modal" aria-label="Close"><i class="fa-solid fa-xmark fa-2x"></i></button>
                         </div>
                         <h2 class="text-uppercase fw-bold text-center mb-5">Edit User Profile</h2>
-                        <form action="/profile" method="post">
+                        <form action="">
                             <!-- Change avatar -->
                             <div class="mb-3">
                                 <label for="formFile" class="form-label">Select img</label>
-                                <input class="form-control" type="file" id="formFile" name="change_user_photo">
+                                <input class="form-control" type="file" id="formFile">
                             </div>
                             <!-- Change avatar -->
                             <!-- Change username -->
                             <div class="form-outline mb-4">
                                 <label class="form-label" for="form3Example1cg">User Name</label>
-                                <input type="text" id="form3Example1cg" class="form-control form-control-lg" value="Test User" name="change_user_name"/>
+                                <input type="text" id="form3Example1cg" class="form-control form-control-lg" value="Test User" />
                             </div>
                             <!-- Change username -->
                             <!-- Change user email -->
                             <div class="form-outline mb-4">
                                 <label class="form-label" for="form3Example3cg">User Email</label>
-                                <input type="email" id="form3Example3cg" class="form-control form-control-lg" value="test_email@test.com" name="change_user_email"/>
+                                <input type="email" id="form3Example3cg" class="form-control form-control-lg" value="test_email@test.com" />
                             </div>
                             <!-- Change user email -->
                             <!-- Change Title -->
                             <div class="form-outline mb-4">
                                 <label class="form-label" for="form3Example3cg">About</label>
-                                <input type="text" id="form3Example3cg" class="form-control form-control-lg" placeholder="Title" name="change_user_title" />
+                                <input type="email" id="form3Example3cg" class="form-control form-control-lg" placeholder="Title" />
                             </div>
                             <div class="form-outline mb-4">
-                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="My bio" name="change_user_about"></textarea>
+                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="My bio"></textarea>
                             </div>
                             <!-- Change Title -->
                             <div class="d-flex justify-content-center mt-4">
-                                <button type="submit" class="btn btn-outline-light btn-lg px-5">Save</button>
+                                <button type="button" class="btn btn-outline-light btn-lg px-5">Save</button>
                             </div>
                         </form>
                     </div>
@@ -169,15 +170,15 @@
                             <button type="button" class="btn text-white" data-bs-dismiss="modal" aria-label="Close"><i class="fa-solid fa-xmark fa-2x"></i></button>
                         </div>
                         <h2 class="text-uppercase fw-bold text-center mb-5">Add new post</h2>
-                        <form action="/profile" method="post">
+                        <form action="">
                             <!-- Title -->
                             <div class="form-outline mb-4">
-                                <input type="text" id="form3Example1cg" class="form-control form-control-lg" placeholder="Title" name="title_for_post"/>
+                                <input type="text" id="form3Example1cg" class="form-control form-control-lg" placeholder="Title" />
                             </div>
                             <!-- Title -->
                             <!-- Text -->
                             <div class="form-outline mb-4">
-                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Text" name="text_for_post"></textarea>
+                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Text"></textarea>
                             </div>
                             <!-- Text -->
                             <!-- Collapse -->
@@ -276,7 +277,7 @@
                     </div>
                     <!-- Collapse -->
                     <div class="d-flex justify-content-center mt-4">
-                        <button type="submit" class="btn btn-outline-light btn-lg px-5">Save</button>
+                        <button type="button" class="btn btn-outline-light btn-lg px-5">Save</button>
                     </div>
                     </form>
                 </div>
@@ -297,14 +298,19 @@
                             <button type="button" class="btn text-white" data-bs-dismiss="modal" aria-label="Close"><i class="fa-solid fa-xmark fa-2x"></i></button>
                         </div>
                         <h2 class="text-uppercase fw-bold text-center mb-5">Change Password</h2>
-                        <form action="/profile" method="post">
+                        <p class="text-white-50 mb-5 text-center">Please enter your old password and come up with a new one!</p>
+                        <form>
+                            <div class="form-outline mb-4">
+                                <label class="form-label" for="oldPassword">Old Password</label>
+                                <input type="password" id="oldPassword" class="form-control form-control-lg" />
+                            </div>
                             <div class="form-outline form-white mb-4">
                                 <label class="form-label" for="newPassword">New Password</label>
                                 <input type="text" id="newPassword" class="form-control form-control-lg" />
                             </div>
                             <div class="form-outline form-white mb-4">
                                 <label class="form-label" for="confirmNewPassword">Confirm New Password</label>
-                                <input type="password" id="confirmNewPassword" class="form-control form-control-lg" name="password_user_new" />
+                                <input type="password" id="confirmNewPassword" class="form-control form-control-lg" />
                             </div>
                             <button class="btn btn-outline-light btn-lg px-5" type="submit">Save</button>
                         </form>
@@ -315,104 +321,32 @@
     </div>
 </div>
 <!-- Modal Change User Password -->
-<!-- Modal Language List -->
-<div class="modal fade" id="languageList" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg modal-dialog-centered">
-        <div class="modal-content" style="border-radius: 1rem;">
-            <div class="card modal-body bg-dark text-white" style="border-radius: 1rem;">
-                <div class="card-body px-5">
-                    <div class="mb-md-5 mt-md-4 pb-2">
-                        <div class="d-flex justify-content-end">
-                            <button type="button" class="btn text-white" data-bs-dismiss="modal" aria-label="Close"><i class="fa-solid fa-xmark fa-2x"></i></button>
-                        </div>
-                        <h2 class="fw-bold mb-5 text-center">Language list</h2>
-                        <form action="">
-                            <div class="overflow-scroll h3" style="max-height: 300px;">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="" id="English" checked>
-                                    <label class="form-check-label" for="English">
-                                        English
-                                    </label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="" id="German" checked>
-                                    <label class="form-check-label" for="German">
-                                        German
-                                    </label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="" id="Italy">
-                                    <label class="form-check-label" for="Italy">
-                                        Italy
-                                    </label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="" id="French">
-                                    <label class="form-check-label" for="French">
-                                        French
-                                    </label>
-                                </div>
-                            </div>
-                            <div class="d-flex justify-content-center mt-4">
-                                <button type="button" class="btn btn-outline-light btn-lg px-5">Save</button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- Modal Language List -->
-<!-- Modal Overview -->
-<div class="modal fade" id="overView" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg modal-dialog-centered">
-        <div class="modal-content" style="border-radius: 1rem;">
-            <div class="card modal-body bg-dark text-white" style="border-radius: 1rem;">
-                <div class="card-body px-5">
-                    <div class="mb-md-5 mt-md-4 pb-2">
-                        <div class="d-flex justify-content-end">
-                            <button type="button" class="btn text-white" data-bs-dismiss="modal" aria-label="Close"><i class="fa-solid fa-xmark fa-2x"></i></button>
-                        </div>
-                        <h2 class="fw-bold mb-5">Overview</h2>
-                        <form action="/profile" method="post">
-                            <div class="form-outline mb-4">
-                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="10" name="overview"></textarea>
-                            </div>
-                            <div class="d-flex justify-content-center mt-4">
-                                <button type="submit" class="btn btn-outline-light btn-lg px-5">Save</button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- Modal Overview -->
 <!-- Main -->
 <div class="main">
     <div class="container-fluid">
         <div class="row m-3">
             <div class="col-lg-3 mt-4">
-                <div class="card mb-3" th:each="user : ${lox}">
+                <div class="card mb-3">
                     <div class="card-body text-center">
                         <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava3.webp" alt="avatar" class="rounded-circle img-fluid" style="width: 150px;">
                         <div class="my-3">
-                            <h5 class="mb-0" th:text="${user.username}"/>
-                            <span class="small text-muted" th:text="${user.qualification}" />
+                            <h5 class="mb-0">John Smith</h5>
+                            <span class="small text-muted">Student Jan 1 1998</span>
                         </div>
                         <!-- Button for followers -->
-                        <!-- <div class="d-flex justify-content-center mb-2">
-                            <button type="button" class="btn btn-dark">Add frends</button>
-                            <button type="button" class="btn btn-outline-dark ms-1">Message</button>
-                            </div> -->
-                        <!-- Button for followers -->
                         <div class="d-flex justify-content-center mb-2">
+                            <button type="submit" class="btn btn-dark" disabled>Add frends</button>
+                            <button type="submit" class="btn btn-outline-dark ms-1" disabled>Message</button>
+                        </div>
+
+                        <!-- Button for followers -->
+                        <!-- Buttons for user -->
+                        <!--   <div class="d-flex justify-content-center mb-2">
                             <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#addNewPost">Add Post</button>
                             <button type="button" class="btn btn-outline-dark ms-1" data-bs-toggle="modal" data-bs-target="#editUserProfile">Edit Profile</button>
                         </div>
-                        <button type="button" class="btn btn-outline-dark ms-1" data-bs-toggle="modal" data-bs-target="#changePassword">Change Password</button>
+                        <button type="button" class="btn btn-outline-dark ms-1" data-bs-toggle="modal" data-bs-target="#changePassword">Change Password</button> -->
+                        <!-- Buttons for user -->
                         <div class="d-flex justify-content-between px-2">
                             <div class="">
                                 <p class="h5">Frends</p>
@@ -493,222 +427,35 @@
                 <!-- Frends list -->
             </div>
             <div class="col-lg-6 mt-4 ">
-                <div class="card mb-5`" th:each="user : ${lox}">
+                <div class="card mb-2">
                     <div class="card-body text-left">
-                        <p class="h4 fw-bold" th:text="${user.title}">
+                        <p class="h4 fw-bold">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        <p class="h5 text-muted">Lorem, ipsum dolor sit amet.</p>
                         <div class="">
-<!--                            <a href="#"><i class="fa-regular fa-calendar text-dark fa-2x mt-3"></i></a>-->
-                            <a href="/info"><i class="fa-solid fa-circle-info text-dark fa-2x m-3"></i></a>
+                            <a href="#"><i class="fa-regular fa-calendar text-dark fa-2x mt-3"></i></a>
+                            <a href="#"><i class="fa-solid fa-circle-info text-dark fa-2x m-3"></i></a>
                         </div>
                     </div>
                 </div>
-                <div class="card mt-2">
-                    <div class="card-body" th:each="user : ${lox}">
+                <div class="card">
+                    <div class="card-body">
                         <div class="d-flex justify-content-between">
                             <p class="h4 fw-bold">Overview</p>
-                            <a href="#" data-bs-toggle="modal" data-bs-target="#overView"><i class="fa-solid fa-pen-to-square text-dark"></i></a>
                         </div>
-                        <p th:text="${user.about_mae}"/>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut maiores aperiam, rerum, illo tempore sint magni. Sed delectus minus beatae quae labore unde impedit, quasi cum a fugit earum voluptatibus laboriosam nihil eum numquam distinctio necessitatibus ex perspiciatis, id tempora. Qui ex, minima harum ab saepe aut id nisi neque sint, nihil nostrum quibusdam sunt excepturi sequi provident quam iusto quas voluptatem unde adipisci! Quam, voluptas inventore doloribus reprehenderit voluptate, rem et mollitia. Perspiciatis quae nulla, id officiis. Voluptas praesentium, delectus. Accusamus labore modi eaque enim dolore delectus nesciunt rem, aut dicta harum accusantium numquam natus eveniet, a sit non.</p>
                     </div>
                 </div>
-                <div class="card mt-2 mb-5">
+                <div class="card mt-4">
                     <div class="card-body">
                         <div class="d-flex justify-content-between mb-4">
                             <p class="h4 fw-bold">Language</p>
-                            <a href="#" data-bs-toggle="modal" data-bs-target="#languageList"><i class="fa-solid fa-pen-to-square text-dark"></i></a>
                         </div>
                         <span class="border border-secondary mx-2 p-2 text-white rounded-pill bg-secondary">English</span>
                         <span class="border border-secondary mx-2 p-2 text-white rounded-pill bg-secondary">German</span>
                     </div>
                 </div>
-                <!-- Post List -->
-                <div class="card mt-3" th:each="post : ${post}">
-                    <div class="card-body" th:each="user : ${lox}">
-                        <div class="d-flex justify-content-between">
-                            <div class="d-flex ">
-                                <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava3.webp" alt="avatar" class="rounded-circle img-fluid" style="width: 50px; height: 50px;">
-                                <div>
-                                    <span class="h5 fw-bold" th:text="${user.username}"/><br>
-                                    <span class="small text-muted"><i class="fa-solid fa-clock"></i> 3 min ago</span>
-                                </div>
-                            </div>
-                            <div>
-                                <a href="#">
-                                    <i class="fa-solid fa-bookmark text-dark fa-2x"></i>
-                                </a>
-                            </div>
-                        </div>
-                        <p class="h4 mt-4 fw-bold" th:text="${post.title}"/>
-                        <p class="h5 text-muted" th:text="${post.anons}"/>
-                        <a href="#" class="text-dark">View more</a>
-                        <div class="mt-3 mb-3">
-                            <span class="border border-secondary mx-2 p-2 text-white rounded-pill bg-secondary">English</span>
-                            <span class="border border-secondary mx-2 p-2 text-white rounded-pill bg-secondary">Books</span>
-                            <span class="border border-secondary mx-2 p-2 text-white rounded-pill bg-secondary">Language</span>
-                        </div>
-                        <hr class="dropdown-divider">
-                        <div class="d-flex">
-                            <div class="mx-3"><i class="fa-solid fa-heart"></i> Like <span class="">15</span></div>
-                            <div><a href="#collapseComment" data-bs-toggle="collapse" class="text-dark" role="button" aria-expanded="false" aria-controls="collapseComment"><i class="fa-solid fa-comment"></i> Comments <span>8</span></a></div>
-                            <div><i class="fa-solid fa-link mx-2"></i></div>
-                        </div>
-                        <div class="collapse" id="collapseComment">
-                            <!-- Comments -->
-                            <div class="row overflow-scroll d-flex justify-content-center" style="max-height: 500px;">
-                                <div class="card">
-                                    <div class="card-body p-4">
-                                        <div class="row">
-                                            <div class="col">
-                                                <div class="d-flex flex-start">
-                                                    <img class="rounded-circle shadow-1-strong me-3" src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava3.webp" alt="avatar" width="65" height="65" />
-                                                    <div class="flex-grow-1 flex-shrink-1">
-                                                        <div>
-                                                            <div class="d-flex justify-content-between align-items-center">
-                                                                <p class="mb-1">
-                                                                    Maria Smantha <span class="small">- 2 hours ago</span>
-                                                                </p>
-                                                                <a href="#!" class="text-dark"><i class="fas fa-reply fa-xs"></i><span class="small"> reply</span></a>
-                                                            </div>
-                                                            <p class="small mb-0">
-                                                                It is a long established fact that a reader will be distracted by
-                                                                the readable content of a page.
-                                                            </p>
-                                                        </div>
-                                                        <div class="d-flex flex-start mt-4">
-                                                            <a class="me-3" href="#">
-                                                                <img class="rounded-circle shadow-1-strong" src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava3.webp" alt="avatar" width="65" height="65" />
-                                                            </a>
-                                                            <div class="flex-grow-1 flex-shrink-1">
-                                                                <div>
-                                                                    <div class="d-flex justify-content-between align-items-center">
-                                                                        <p class="mb-1">
-                                                                            Simona Disa <span class="small">- 3 hours ago</span>
-                                                                        </p>
-                                                                    </div>
-                                                                    <p class="small mb-0">
-                                                                        letters, as opposed to using 'Content here, content here',
-                                                                        making it look like readable English.
-                                                                    </p>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="d-flex flex-start mt-4">
-                                                            <a class="me-3" href="#">
-                                                                <img class="rounded-circle shadow-1-strong" src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava3.webp" alt="avatar" width="65" height="65" />
-                                                            </a>
-                                                            <div class="flex-grow-1 flex-shrink-1">
-                                                                <div>
-                                                                    <div class="d-flex justify-content-between align-items-center">
-                                                                        <p class="mb-1">
-                                                                            John Smith <span class="small">- 4 hours ago</span>
-                                                                        </p>
-                                                                    </div>
-                                                                    <p class="small mb-0">
-                                                                        the majority have suffered alteration in some form, by
-                                                                        injected humour, or randomised words.
-                                                                    </p>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="d-flex flex-start mt-4">
-                                                    <img class="rounded-circle shadow-1-strong me-3" src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava3.webp" alt="avatar" width="65" height="65" />
-                                                    <div class="flex-grow-1 flex-shrink-1">
-                                                        <div>
-                                                            <div class="d-flex justify-content-between align-items-center">
-                                                                <p class="mb-1">
-                                                                    Natalie Smith <span class="small">- 2 hours ago</span>
-                                                                </p>
-                                                                <a href="#!" class="text-dark"><i class="fas fa-reply fa-xs"></i><span class="small"> reply</span></a>
-                                                            </div>
-                                                            <p class="small mb-0">
-                                                                The standard chunk of Lorem Ipsum used since the 1500s is
-                                                                reproduced below for those interested. Sections 1.10.32 and
-                                                                1.10.33.
-                                                            </p>
-                                                        </div>
-                                                        <div class="d-flex flex-start mt-4">
-                                                            <a class="me-3" href="#">
-                                                                <img class="rounded-circle shadow-1-strong" src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava3.webp" alt="avatar" width="65" height="65" />
-                                                            </a>
-                                                            <div class="flex-grow-1 flex-shrink-1">
-                                                                <div>
-                                                                    <div class="d-flex justify-content-between align-items-center">
-                                                                        <p class="mb-1">
-                                                                            Lisa Cudrow <span class="small">- 4 hours ago</span>
-                                                                        </p>
-                                                                    </div>
-                                                                    <p class="small mb-0">
-                                                                        Cras sit amet nibh libero, in gravida nulla. Nulla vel metus
-                                                                        scelerisque ante sollicitudin commodo. Cras purus odio,
-                                                                        vestibulum in vulputate at, tempus viverra turpis.
-                                                                    </p>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="d-flex flex-start mt-4">
-                                                            <a class="me-3" href="#">
-                                                                <img class="rounded-circle shadow-1-strong" src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava3.webp" alt="avatar" width="65" height="65" />
-                                                            </a>
-                                                            <div class="flex-grow-1 flex-shrink-1">
-                                                                <div>
-                                                                    <div class="d-flex justify-content-between align-items-center">
-                                                                        <p class="mb-1">
-                                                                            Maggie McLoan <span class="small">- 5 hours ago</span>
-                                                                        </p>
-                                                                    </div>
-                                                                    <p class="small mb-0">
-                                                                        a Latin professor at Hampden-Sydney College in Virginia,
-                                                                        looked up one of the more obscure Latin words, consectetur
-                                                                    </p>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="d-flex flex-start mt-4">
-                                                            <a class="me-3" href="#">
-                                                                <img class="rounded-circle shadow-1-strong" src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava3.webp" alt="avatar" width="65" height="65" />
-                                                            </a>
-                                                            <div class="flex-grow-1 flex-shrink-1">
-                                                                <div>
-                                                                    <div class="d-flex justify-content-between align-items-center">
-                                                                        <p class="mb-1">
-                                                                            John Smith <span class="small">- 6 hours ago</span>
-                                                                        </p>
-                                                                    </div>
-                                                                    <p class="small mb-0">
-                                                                        Autem, totam debitis suscipit saepe sapiente magnam officiis
-                                                                        quaerat necessitatibus odio assumenda, perferendis quae iusto
-                                                                        labore laboriosam minima numquam impedit quam dolorem!
-                                                                    </p>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card-footer py-3 border-0">
-                                <div class="d-flex flex-start w-100">
-                                    <img class="rounded-circle shadow-1-strong me-3" src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava3.webp" alt="avatar" width="40" height="40" />
-                                    <div class="form-outline w-100">
-                                        <textarea class="form-control" id="textAreaExample" rows="4"></textarea>
-                                    </div>
-                                </div>
-                                <div class="float-end mt-2 pt-1">
-                                    <button type="button" class="btn btn-dark btn-sm">Post comment</button>
-                                    <button type="button" class="btn btn-outline-dark btn-sm">Cancel</button>
-                                </div>
-                            </div>
-                            <!-- Comments -->
-                        </div>
-                    </div>
-                </div>
             </div>
-                <!-- Teacher List -->
+            <!-- Teacher List -->
             <div class="col-lg-3">
                 <div class="card mt-4">
                     <div class="card-body">
@@ -773,6 +520,8 @@
     </div>
 </div>
 <!-- Main -->
+<!-- Footer -->
+<!-- Remove the container if you want to extend the Footer to full width. -->
 <footer class="footer mt-auto text-center text-white">
     <!-- Grid container -->
     <div class="container pt-4">
@@ -801,6 +550,8 @@
     </div>
     <!-- Copyright -->
 </footer>
+<!-- End of .container -->
+<!-- Footer -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
 

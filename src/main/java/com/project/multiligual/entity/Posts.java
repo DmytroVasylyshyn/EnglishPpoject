@@ -2,6 +2,7 @@ package com.project.multiligual.entity;
 
 import jakarta.persistence.*;
 import java.util.Date;
+import java.util.Optional;
 
 @Entity
 public class Posts {
@@ -14,16 +15,49 @@ public class Posts {
     private Date date;
     private int likes;
     private String link;
-
+    private String Global_Tags;
+    private String Secondary_Tags;
 
     @Lob
     private byte[] photo;
 
-    @ManyToOne
-    @JoinColumn(name = "user_id")
-    private User user;
+    @JoinColumn
+    @Column(name = "user_id")
+    private long userId; // замість об'єкта користувача, використовуємо просто ідентифікатор користувача
 
+    public Posts(String title, String fulltext, long userId) {
+        this.title = title;
+        this.fulltext = fulltext;
+        this.anons = (fulltext.length() > 200) ? fulltext.substring(0, 200) : fulltext;
+        this.userId = userId;
+    }
+    public Posts() {
 
+    }
+
+    public long getUserId() {
+        return userId;
+    }
+
+    public void setUserId(long userId) {
+        this.userId = userId;
+    }
+
+    public String getGlobal_Tags() {
+        return Global_Tags;
+    }
+
+    public void setGlobal_Tags(String global_Tags) {
+        Global_Tags = global_Tags;
+    }
+
+    public String getSecondary_Tags() {
+        return Secondary_Tags;
+    }
+
+    public void setSecondary_Tags(String secondary_Tags) {
+        Secondary_Tags = secondary_Tags;
+    }
 
     public String getLink() {
         return link;
@@ -89,11 +123,5 @@ public class Posts {
         this.photo = photo;
     }
 
-    public User getUser() {
-        return user;
-    }
 
-    public void setUser(User user) {
-        this.user = user;
-    }
 }

@@ -2,6 +2,7 @@ package com.project.multiligual.entity;
 
 import jakarta.persistence.*;
 
+import java.util.Optional;
 
 
 @Entity
@@ -18,15 +19,53 @@ public class User {
     private String email;
     private String phonenumber;
     private int age;
-    private String address;
+    private String title;
     private int languageid;
     private String qualification;
+    private String about_mae;
 
-    public User(String username) {
-        this.username = username;
+
+    @Lob
+    private byte[] icon;
+
+    public byte[] getIcon() {
+        return icon;
+    }
+
+    public void setIcon(byte[] icon) {
+        this.icon = icon;
+    }
+
+    public User(String about_mae) {
+        this.about_mae = about_mae;
+    }
+
+
+    public String getAbout_mae() {
+        return about_mae;
+    }
+
+    public void setAbout_mae(String about_mae) {
+        this.about_mae = about_mae;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
     }
 
     public User() {
+    }
+
+    public User(String username, String email, String title, String about_mae, byte[] icon) {
+        this.username = username;
+        this.email = email;
+        this.title = title;
+        this.about_mae = about_mae;
+        this.icon = icon;
     }
 
     public User(String username, String email, String password, String qualification) {
@@ -36,22 +75,15 @@ public class User {
         this.qualification=qualification;
     }
 
-    public User(String usersurname, String phonenumber, int age, String address, int languageid, String qualification) {
+    public User(String usersurname, String phonenumber, int age, int languageid, String qualification) {
         this.usersurname = usersurname;
         this.phonenumber = phonenumber;
         this.age = age;
-        this.address = address;
         this.languageid = languageid;
         this.qualification = qualification;
     }
 
-    public String getAddress() {
-        return address;
-    }
 
-    public void setAddress(String address) {
-        this.address = address;
-    }
 
     public Long getUser_id() {
         return user_id;

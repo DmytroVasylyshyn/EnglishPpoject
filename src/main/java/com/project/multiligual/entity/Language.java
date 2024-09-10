@@ -13,6 +13,15 @@ public class Language {
 
     private String languageName;
     private String languageShortName;
+    private int score;
+
+    public int getScore() {
+        return score;
+    }
+
+    public void setScore(int score) {
+        this.score = score;
+    }
 
     public Long getId() {
         return id;
